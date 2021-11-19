@@ -1,7 +1,7 @@
 import unittest
 from random import randint
 
-from src.round_robin import RoundRobin
+from logic.round_robin import RoundRobin
 
 class TestRoundRobin(unittest.TestCase):
     N_JOBS = 20
