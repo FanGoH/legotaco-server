@@ -1,4 +1,5 @@
 import threading
+from typing import Callable
 
 
 class RoundRobin:
@@ -6,7 +7,7 @@ class RoundRobin:
     elements = []
     working = {}
 
-    def __init__(self, elements: list, job_replacer, lock: threading.Lock):
+    def __init__(self, elements: list, job_replacer: Callable, lock: threading.Lock):
         self.elements = elements
         self.replacer = job_replacer
         self.lock = lock
@@ -17,17 +18,23 @@ class RoundRobin:
         # tracking working jobs is necesary
         # we don't want to pollute the calling scope
         # our option is to use a callback function that works over the object
-        self.lock.acquire()  # No context switching here, critical section
-        self.i = self._find_next_available_index()
 
         # Before releasing the lock, we mark the element as being worked on
         # Avoids a context switch that can reschedule the same job
-        self.working[self.i] = True
-        self.lock.release()
+        try:
+            self.lock.acquire()  # No context switching here, critical section
+            self.i = self._find_next_available_index()
+            self.working[self.i] = True
+
+            element = self._get_current_element()
+        except Exception as error:
+            raise error
+        finally:  # lock cleanup
+            self.lock.release()
 
         # the worker needs to be called outside the lock
         # -> allows multiple elements to be worked on at the same time
-        result = worker(self._get_current_element())
+        result = worker(element)
 
         # Finished working on the element
         # Acquiring a lock is not necessary because this is the only instance using the resource
@@ -43,7 +50,6 @@ class RoundRobin:
             # If all the elements have been checked, and every one of them is being worked on,
             # We raise an exception to avoid deadlocking everything
             if starting_index == next_index:
-                self.lock.release()
                 raise Exception("Every element is being worked on")
         return next_index
 
