@@ -1,18 +1,21 @@
 import threading
 from typing import Callable
 
+class Scheduler:
+    def complete_job(self, handle):
+        pass
 
-class RoundRobin:
-    i = -1
-    elements = []
-    working = {}
+class RoundRobin(Scheduler):
 
     def __init__(self, elements: list, job_replacer: Callable, lock: threading.Lock):
         self.elements = elements
         self.replacer = job_replacer
         self.lock = lock
 
-    def work_on_next(self, worker):
+        self.i = -1
+        self.working = {}
+
+    def work_on_next(self, work):
         # an instance of RoundRobin can be used buy multiple Workers at the same time
         # it should not be possible to work on the same job at the same time
         # tracking working jobs is necesary
@@ -23,22 +26,22 @@ class RoundRobin:
         # Avoids a context switch that can reschedule the same job
         try:
             self.lock.acquire()  # No context switching here, critical section
-            self.i = self._find_next_available_index()
+            i = self.i = self._find_next_available_index()
             self.working[self.i] = True
 
             element = self._get_current_element()
-        except Exception as error:
-            raise error
-        finally:  # lock cleanup
             self.lock.release()
+        except Exception as error:
+            self.lock.release()
+            raise error
 
         # the worker needs to be called outside the lock
         # -> allows multiple elements to be worked on at the same time
-        result = worker(element)
+        result = work(element, i)
 
         # Finished working on the element
         # Acquiring a lock is not necessary because this is the only instance using the resource
-        self.working[self.i] = False
+        self.working[i] = False
         return result
 
     def _find_next_available_index(self):
@@ -56,5 +59,5 @@ class RoundRobin:
     def _get_current_element(self):
         return self.elements[self.i]
 
-    def complete_job(self):
-        self.elements[self.i] = self.replacer(self.i)
+    def complete_job(self, handle):
+        self.elements[handle] = self.replacer(handle)
