@@ -20,7 +20,7 @@ SPEEDUP = 0  # 1 second equals 0 seconds 8)
 
 MAIN_PRODUCT_BASE_TIME = {
     "taco": 1,
-    "quesadilla": 20,
+    "quesadilla": 0,
 }
 
 
@@ -29,6 +29,7 @@ class TaqueroConfig:
     name: str
     types: list[str]
     fillings: dict[str, Filling]
+    quesadillas: Filling
     scheduler: Scheduler
     lock: Lock
     send_to_master: Callable[[Order, ], None]
@@ -40,6 +41,7 @@ class Taquero:
         self.name = config.name
         self.types = config.types
         self.fillings = config.fillings
+        self.quesadillas = config.quesadillas
         self.scheduler = config.scheduler
         self.send_to_master = config.send_to_master
         self.lock = config.lock
@@ -61,16 +63,22 @@ class Taquero:
             # this is in case of scaling or something
             self.lock.acquire()
             amount = tacos.quantity if tacos.quantity < remaining_quantum else remaining_quantum
+            
+            if tacos.type == 'quesadilla' and amount > self.quesadillas.available:
+                self.lock.release()
+                continue
 
             if not self.enough_ingredients(tacos, amount):
                 work_performed.append({
                     "amount": 0,
                     "messages": "Not enough fillings",
                 })
+                self.lock.release()
                 break
             remaining_quantum -= amount
             tacos.quantity -= amount  # -= is not threadsafe
-            self.use_fillings(tacos, amount)
+
+            self.use_ingredients(tacos, amount)
             self.lock.release()
 
             prep_time = self.calculate_preparation_time(tacos, amount)
@@ -123,6 +131,8 @@ class Taquero:
                 return False
         return True
 
-    def use_fillings(self, tacos, amount):
+    def use_ingredients(self, tacos, amount):
+        if tacos.type == "quesadilla":
+            self.quesadillas.available -= amount
         for filling in tacos.ingredients:
             self.fillings[filling].available -= amount
