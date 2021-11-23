@@ -165,3 +165,19 @@ class TestTaquero(unittest.TestCase):
         taquero.work()
         self.assertEquals(taquero_config.quesadillas.available, 2)
 
+    def test_order_complete_calls_master_callback(self):
+        called = False
+        def send_to_master(_):
+            nonlocal called
+            called = True
+
+        scheduler = self.generate_scheduler(order_generator=self.generate_quesadilla_order)
+        taquero_config = self.generate_taquero_config(scheduler=scheduler)
+        
+        taquero_config.send_to_master = send_to_master
+        taquero = Taquero(taquero_config)
+
+        taquero.work()
+        taquero.work()
+
+        self.assertTrue(called)
