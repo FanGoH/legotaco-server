@@ -53,12 +53,12 @@ class TestTaquero(unittest.TestCase):
     def generate_quesadilla_order(self):
         return Order(QUESADILLA_ORDER)
 
-    def generate_scheduler(self, order_generator: Callable = None):
+    def generate_scheduler(self, order_generator: Callable = None, replacer=None):
         if not order_generator:
             order_generator = self.generate_sample_order
-
-        def replacer(i):
-            return order_generator()
+        if not replacer:
+            def replacer(i):
+                return order_generator()
 
         return RoundRobin(
             [order_generator()],
@@ -168,6 +168,7 @@ class TestTaquero(unittest.TestCase):
     def test_order_complete_calls_master_callback(self):
         called = False
         def send_to_master(_):
+            print(jsons.dumps(_))
             nonlocal called
             called = True
 
@@ -181,3 +182,16 @@ class TestTaquero(unittest.TestCase):
         taquero.work()
 
         self.assertTrue(called)
+
+    def test_taquero_no_order(self):
+        scheduler = self.generate_scheduler(
+            order_generator=self.generate_quesadilla_order,
+            replacer=lambda _: None,
+        )
+        taquero_config = self.generate_taquero_config(scheduler=scheduler)
+        taquero = Taquero(taquero_config)
+
+        taquero.work()
+        taquero.work()
+        # No verification, after finishing the firs order, the taquero has nothing to do
+        taquero.work()

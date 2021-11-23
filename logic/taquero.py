@@ -51,6 +51,9 @@ class Taquero:
             lambda order, handle: self.work_on_order(order, handle))
 
     def work_on_order(self, order: Order, handle: int):
+        if not order:
+            return
+        
         remaining_quantum = QUANTUM
         work_performed = []
 
