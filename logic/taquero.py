@@ -16,7 +16,13 @@ QUANTUM = 5
 BASE_TACO_TIME = 1
 FILLING_TIME = 0.5
 
-SPEEDUP = 0.01 # 1 second equals 0.01 seconds 8)
+SPEEDUP = 0  # 1 second equals 0 seconds 8)
+
+MAIN_PRODUCT_BASE_TIME = {
+    "taco": 1,
+    "quesadilla": 20,
+}
+
 
 @dataclass
 class TaqueroConfig:
@@ -25,7 +31,7 @@ class TaqueroConfig:
     fillings: dict[str, Filling]
     scheduler: Scheduler
     lock: Lock
-    send_to_master: Callable[[Order,], None]
+    send_to_master: Callable[[Order, ], None]
 
 
 class Taquero:
@@ -39,47 +45,46 @@ class Taquero:
         self.lock = config.lock
 
     def work(self):
-        self.scheduler.work_on_next(lambda order, handle: self.work_on_order(order, handle))
+        self.scheduler.work_on_next(
+            lambda order, handle: self.work_on_order(order, handle))
 
     def work_on_order(self, order: Order, handle: int):
         remaining_quantum = QUANTUM
-        work_performed = {
-            "amount": 0,
-            "messages": "Not enough fillings",
-        }
-        
+        work_performed = []
+
         todo = self.get_order_todo(order)
-        start = timeit.timeit()
+        start = time.time()
         for tacos in todo:
             if remaining_quantum == 0:
                 break
-            if remaining_quantum < 0: # IDk
-                raise Exception("UH UH UH UH UH NO NO NO NO NO")
             # and order may only be worked by one thread at the same time
             # this is in case of scaling or something
             self.lock.acquire()
             amount = tacos.quantity if tacos.quantity < remaining_quantum else remaining_quantum
 
             if not self.enough_ingredients(tacos, amount):
+                work_performed.append({
+                    "amount": 0,
+                    "messages": "Not enough fillings",
+                })
                 break
             remaining_quantum -= amount
             tacos.quantity -= amount  # -= is not threadsafe
             self.use_fillings(tacos, amount)
             self.lock.release()
 
-            prep_time = amount * BASE_TACO_TIME + \
-                amount * len(tacos.ingredients)
+            prep_time = self.calculate_preparation_time(tacos, amount)
 
-            work_performed = {
+            work_performed.append({
                 "amount": amount,
                 "fillings": tacos.ingredients,
                 "type": tacos.type,
                 "meat": tacos.meat,
                 "prep_time": prep_time,
-            }
+            })
             sleep(prep_time * SPEEDUP)
 
-        end = timeit.timeit()
+        end = time.time()
 
         work_log = {
             "who": self.name,
@@ -91,8 +96,12 @@ class Taquero:
         order.log_work(work_log)
         if self.is_order_complete(order):
             self.complete_order(order, handle)
-            
-    
+
+    def calculate_preparation_time(self, tacos, amount):
+        base_time = MAIN_PRODUCT_BASE_TIME[tacos.type] * amount
+        fillings_time = FILLING_TIME * len(tacos.ingredients) * amount
+        return base_time + fillings_time
+
     def complete_order(self, order, handle):
         self.lock.acquire()
         self.send_to_master(order)
@@ -103,10 +112,10 @@ class Taquero:
         return len(self.get_order_todo(order)) == 0
 
     def get_order_todo(self, order):
-        raw_todo = map(lambda type: order.get_remaining_parts_of_type(type), self.types)
+        raw_todo = map(
+            lambda type: order.get_remaining_parts_of_type(type), self.types)
         todo = functools.reduce(lambda p, c: [*p, *c], raw_todo, [])
         return todo
-
 
     def enough_ingredients(self, tacos, amount):
         for filling in tacos.ingredients:
