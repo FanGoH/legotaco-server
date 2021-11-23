@@ -57,9 +57,9 @@ from typing import List
 
 
 class Order:
-    def __init__(self, raw_order):
+    def __init__(self, raw_order,index_queue=0):
         self.raw_order = raw_order
-
+        self.index = index_queue
         self.sub_orders = {}
         for sub_order in raw_order["orden"]:
             meat_type = sub_order["meat"]
@@ -81,4 +81,8 @@ class Order:
     # },
     def log_work(self, log):
         self.raw_order["response"].append(log)
+    
+    def get_Handle(self):
+        return self.raw_order['handle']
+        
 

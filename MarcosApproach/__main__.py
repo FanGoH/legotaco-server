@@ -157,7 +157,7 @@ def Chalan(ObservablesFills,ObservableTortilla ):
 def Quesadillero(stocks):
     while True:
         for i in stocks:
-            if(i['quesadillas']<5):
+            if(i['quesadillas'] < 5):
                 sleep(20)
                 quesadillasLock.acquire()
                 i['quesadillas']+=1
