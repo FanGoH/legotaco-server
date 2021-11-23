@@ -3,7 +3,6 @@ import functools
 from threading import Lock
 from time import sleep
 import time
-import timeit
 from typing import Callable
 
 from logic.filling import Filling
