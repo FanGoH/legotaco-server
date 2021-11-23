@@ -1,9 +1,14 @@
 import threading
-from typing import Callable
+from typing import Any, Callable
 
 class Scheduler:
     def complete_job(self, handle):
         pass
+    def get_max_elements(self) -> int:
+        pass
+    def work_on_next(self, work: Callable[[Any, int], Any]):
+        pass
+
 
 class RoundRobin(Scheduler):
 
@@ -58,6 +63,9 @@ class RoundRobin(Scheduler):
 
     def _get_current_element(self):
         return self.elements[self.i]
+
+    def get_max_elements(self):
+        return len(self.elements)
 
     def complete_job(self, handle):
         self.elements[handle] = self.replacer(handle)
