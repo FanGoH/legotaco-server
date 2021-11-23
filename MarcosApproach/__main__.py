@@ -1,5 +1,5 @@
-from threading import Thread
-from time import sleep, time
+from threading import Thread, Lock
+from time import sleep, thread_time, time
 import json
 from queue import SimpleQueue
 import os
@@ -11,6 +11,14 @@ times={
 maximos ={
     "cebolla":200, "cilantro":200, "salsa":150, "guacamole":100, "tortillas":50
 }
+
+MaximosLock ={
+    "cebolla":Lock(), "cilantro":Lock(), "salsa":Lock(), "guacamole":Lock(), "tortillas":Lock()
+}
+
+quesadillasLock=Lock()
+tortillasLock = Lock()
+
 def Taquero(queue:SimpleQueue,meats,tortillas,quesadillas,Fillings):
     while True:
         if(not queue.empty()):
@@ -94,11 +102,17 @@ def Taquero(queue:SimpleQueue,meats,tortillas,quesadillas,Fillings):
                 print("")
                 print(element)
                 if(element['type']=='quesadilla'):
+                    quesadillasLock.acquire()
                     quesadillas['quesadillas']-=qty
+                    quesadillasLock.release()
                 else:
+                    tortillasLock.acquire()
                     tortillas['tortillas']-=qty
+                    tortillasLock.release()
                 for ingredient in element['ingredients']:
+                    MaximosLock[ingredient].acquire()
                     Fillings[ingredient] -= qty 
+                    MaximosLock[ingredient].release()
                     time += qty * 0.5
                 element['quantity']-=qty
                 
@@ -126,7 +140,9 @@ def Chalan(ObservablesFills,ObservableTortilla ):
                     tiempo = (cantidadALLenar / maximos[elem]) * times[elem]
                     print(f"Llenando {elem}, durara {tiempo} segundos")
                     sleep(tiempo)
+                    MaximosLock[elem].acquire()
                     fills[elem]+=cantidadALLenar
+                    MaximosLock[elem].release()
             
         for elem in ObservableTortilla:
             if elem['tortillas'] < maximos['tortillas']:
@@ -134,14 +150,18 @@ def Chalan(ObservablesFills,ObservableTortilla ):
                 tiempo = (cantidadALLenar / maximos['tortillas']) * times['tortillas']
                 print(f"Llenando Tortillas, se tardara {tiempo} segundos")
                 sleep(tiempo)
+                tortillasLock.acquire()
                 elem['tortillas']+=cantidadALLenar
+                tortillasLock.release()
 
 def Quesadillero(stocks):
     while True:
         for i in stocks:
             if(i['quesadillas']<5):
                 sleep(20)
+                quesadillasLock.acquire()
                 i['quesadillas']+=1
+                quesadillasLock.release()
                 print("Quesadilla Preparada")
                     
                 
