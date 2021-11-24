@@ -50,7 +50,8 @@ class Taquero:
             lambda order, handle: self.work_on_order(order, handle))
 
     def work_on_order(self, order: Order, handle: int):
-        if not order:
+        if not order: # just complete the non existent order to repopulate the scheduler
+            self.complete_order(order, handle)
             return
         
         remaining_quantum = QUANTUM
@@ -76,7 +77,7 @@ class Taquero:
                     "messages": "Not enough fillings",
                 })
                 self.lock.release()
-                break
+                continue
             remaining_quantum -= amount
             tacos.quantity -= amount  # -= is not threadsafe
 
