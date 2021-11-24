@@ -1,4 +1,4 @@
-#    {
+    #    {
 #             "part_id": "1-0",
 #             "type": "taco",
 #             "meat": "suadero",
@@ -82,7 +82,13 @@ class Order:
     def log_work(self, log):
         self.raw_order["response"].append(log)
     
-    def get_Handle(self):
+    def get_handle(self):
         return self.raw_order['handle']
         
-
+    def get_amount_of_quesadillas(self, type):
+        return sum(
+            map(
+                lambda o: o.quantity,
+                filter(lambda o: o.type=="quesadilla", self.get_sub_orders_of_type(type))
+            )
+        )

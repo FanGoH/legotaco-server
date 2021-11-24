@@ -29,6 +29,19 @@ class TestQuesadillero(unittest.TestCase):
         # No jalan en  liveshare
         # te pide permisos o algo asi? o que
         # quedise?
+        # hora de hacer los hacesalsas
+        #quienes son esos?
+        # los rellenafillings
+        # a el chalan que hace un round robin
+        # si 8)
+        # ya sabes el chalan va a ser como el quesadillero
+        # todod es round robin aki 8)
+        # mi implementacion jala chido
+        # ahorita me la robo 
+        # mediomiedo
+        #porque? ira sigueme
+
+        # a es que mira como tenia planeado
         scheduler = RoundRobin(
             [asada_job, adobada_job, carnitas_job],
             None,
