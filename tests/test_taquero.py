@@ -39,7 +39,8 @@ class TestTaquero(unittest.TestCase):
             fillings={
                 "salsa": Filling(1E100),
                 "cilantro": Filling(1E100),
-                "cebolla": Filling(1E100)
+                "cebolla": Filling(1E100),
+                "tortilla": Filling(1E100)
             },
             quesadillas=Filling(5),
             scheduler=scheduler,
