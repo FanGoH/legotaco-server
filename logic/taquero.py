@@ -138,7 +138,7 @@ class Taquero:
     def use_ingredients(self, tacos, amount):
         if tacos.type == "quesadilla":
             self.quesadillas.available -= amount
-        if tacos.taco == "taco":
+        if tacos.type == "taco":
             self.fillings["tortilla"].available -= amount
         for filling in tacos.ingredients:
             self.fillings[filling].available -= amount
