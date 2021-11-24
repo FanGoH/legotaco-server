@@ -28,10 +28,12 @@ def generate_order_replacer(queue):
     pass
 
 adobada_fillings = generate_default_fillings
-adobada_config = TaqueroConfig({
-    "name": "Taquero Adobada",
-    "types": ["adobada"],
-    "fillings": adobada_fillings
-})
+adobada_config = TaqueroConfig(
+    name="Taquero Adobada",
+    types=["adobada"],
+    fillings=adobada_fillings,
+    lock=Lock,
+    send_to_master=send_to_master_queue
+)
 
 adobada_queue = OrderQueue()
