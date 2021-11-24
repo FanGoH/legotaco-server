@@ -68,10 +68,11 @@ class Taquero:
             amount = tacos.quantity if tacos.quantity < remaining_quantum else remaining_quantum
             
             if tacos.type == 'quesadilla' and amount > self.quesadillas.available:
-                self.lock.release()
-                continue
+                amount = self.quesadillas.available
+            if tacos.type == 'taco' and amount > self.fillings["tortilla"].available:
+                amount = self.fillings["tortilla"].available
 
-            if not self.enough_ingredients(tacos, amount):
+            if not self.enough_ingredients(tacos, amount) or amount == 0:
                 work_performed.append({
                     "amount": 0,
                     "messages": "Not enough fillings",
@@ -137,5 +138,7 @@ class Taquero:
     def use_ingredients(self, tacos, amount):
         if tacos.type == "quesadilla":
             self.quesadillas.available -= amount
+        if tacos.taco == "taco":
+            self.fillings["tortilla"].available -= amount
         for filling in tacos.ingredients:
             self.fillings[filling].available -= amount
