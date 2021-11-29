@@ -1,14 +1,8 @@
 from dataclasses import dataclass
 from threading import Lock
 from time import sleep
-from typing import Any, Callable, Dict, List
 from logic.filling import Filling
-from logic.order import Order
 from logic.round_robin import Scheduler
-
-from queue import Queue, SimpleQueue
-
-from enum import Enum
 
 from logic.taquero import SPEEDUP
 
