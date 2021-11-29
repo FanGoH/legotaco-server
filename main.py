@@ -1,9 +1,8 @@
-from types import SimpleNamespace
 from queue import SimpleQueue
 from threading import Lock
+from logic.chalan import Chalan
 from logic.data_classes import GeneratedScheduler, GenericTaquero
 from logic.filling import Filling
-from logic.order import Order
 from logic.round_robin import RoundRobin
 from logic.taquero import Taquero, TaqueroConfig
 from logic.order_queue import OrderQueue
@@ -72,5 +71,31 @@ def generate_scheduler():
 
 if __name__ == "__main__":
     scheduler_adobada = generate_scheduler()
-    taquero_adobada = generate_generic_taquero("Taquero adobada", ["adobada"], scheduler=scheduler_adobada.scheduler)
-    print(scheduler_adobada.scheduler)
+    taquero_adobada = generate_generic_taquero(
+        name="Taquero adobada", 
+        types=["adobada"], 
+        scheduler=scheduler_adobada.scheduler
+    )
+    
+    scheduler_asada = generate_scheduler()
+    taquero_asada_1 = generate_generic_taquero(
+        name="Taquero asada y suadero 1", 
+        types=["asada", "suadero"], 
+        scheduler=scheduler_asada.scheduler
+    )
+    taquero_asada_2 = generate_generic_taquero(
+        name="Taquero asada y suadero 2", 
+        types=["asada", "suadero"], 
+        scheduler=scheduler_asada.scheduler
+    )
+
+    scheduler_tripa = generate_scheduler()
+    taquero_tripa = generate_generic_taquero(
+        name="Taquero tripa y cabeza", 
+        types=["tripa", "cabeza"], 
+        scheduler=scheduler_tripa.scheduler
+    )
+
+    chalan_adobada_asada = Chalan([taquero_adobada.fillings, taquero_asada_1.fillings])
+    chalan_tripa_asada = Chalan([taquero_tripa.fillings, taquero_asada_2.fillings])
+
