@@ -38,3 +38,15 @@ def generate_generic_taquero(name, types, scheduler):
     taquero = Taquero(config)
     return taquero, fillings, quesadillas, config
 
+def generate_order_replacer(queue: OrderQueue):
+    # priority mapping
+    # 0 - New Order
+    # 1 - Order from Taquero
+    # 2 - Only Quesasdillas
+    priorities = [0, 0, 1, 1, 2]
+    def order_replacer(index):
+        nonlocal priorities
+        nonlocal queue
+        return queue.get(priority=priorities[index])
+
+    return order_replacer
