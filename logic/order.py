@@ -1,4 +1,5 @@
-    #    {
+from typing import List
+#    {
 #             "part_id": "1-0",
 #             "type": "taco",
 #             "meat": "suadero",
@@ -10,6 +11,8 @@
 #                 "cebolla"
 #             ]
 #         }
+
+
 class SubOrder:
     def __init__(self, data):
         self.type = data["type"]
@@ -53,11 +56,9 @@ class SubOrder:
 #     ]
 # }
 
-from typing import List
-
 
 class Order:
-    def __init__(self, raw_order,index_queue=0):
+    def __init__(self, raw_order, index_queue=0):
         self.raw_order = raw_order
         self.index = index_queue
         self.sub_orders = {}
@@ -67,11 +68,11 @@ class Order:
                 self.sub_orders[meat_type] = []
             self.sub_orders[meat_type].append(SubOrder(sub_order))
 
-    def get_sub_orders_of_type(self, type_) -> List[SubOrder]: 
+    def get_sub_orders_of_type(self, type_) -> List[SubOrder]:
         return self.sub_orders.get(type_, [])
-    
+
     def get_remaining_parts_of_type(self, type_):
-        return list(filter(lambda o: o.quantity > 0 ,self.get_sub_orders_of_type(type_)))
+        return list(filter(lambda o: o.quantity > 0, self.get_sub_orders_of_type(type_)))
 
     # {
     #     "who": "asignador",
@@ -81,14 +82,15 @@ class Order:
     # },
     def log_work(self, log):
         self.raw_order["response"].append(log)
-    
+
     def get_handle(self):
         return self.raw_order['handle']
-        
+
     def get_amount_of_quesadillas(self, type):
         return sum(
             map(
                 lambda o: o.quantity,
-                filter(lambda o: o.type=="quesadilla", self.get_sub_orders_of_type(type))
+                filter(lambda o: o.type == "quesadilla",
+                       self.get_sub_orders_of_type(type))
             )
         )
