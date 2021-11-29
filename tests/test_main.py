@@ -46,10 +46,9 @@ def create_sentinel_order(sentinel_value):
 lock = Lock()
 
 
+PRIORITIES = [0, 0, 1, 1, 2]
 class TestGenerateScheduler(unittest.TestCase):
     def test_add_orders(self):
-        PRIORITIES = [0, 0, 1, 1, 2]
-
         scheduler = generate_scheduler()
         taquero = generate_generic_taquero(
             name="Taquero Test",
@@ -64,6 +63,36 @@ class TestGenerateScheduler(unittest.TestCase):
 
         for i, p in enumerate(PRIORITIES):
             taquero.taquero.work()
+            # Verify that the priority and index of the sentinel is the same
+            # as the one of the inserted elements
+            # Assumes that the taquero works in roundrobing
+            self.assertEqual(
+                scheduler.elements[i].raw_order["sentinel"], (i, p))
+    
+    def test_shared_scheduler(self):
+        scheduler = generate_scheduler()
+        taquero_1 = generate_generic_taquero(
+            name="Taquero Test 1",
+            types=["carnitas"],
+            scheduler=scheduler.scheduler,
+        )
+        taquero_2 = generate_generic_taquero(
+            name="Taquero Test 2",
+            types=["carnitas no"],
+            scheduler=scheduler.scheduler,
+        )
+
+        for i, p in enumerate([*PRIORITIES, *PRIORITIES]):
+            scheduler.queue.put(
+                priority=p, order=create_sentinel_order((i, p)))
+
+        taquero_1.taquero.work()
+        taquero_2.taquero.work()
+        taquero_1.taquero.work()
+        taquero_1.taquero.work()
+        taquero_2.taquero.work()
+
+        for i, p in enumerate(PRIORITIES):
             # Verify that the priority and index of the sentinel is the same
             # as the one of the inserted elements
             # Assumes that the taquero works in roundrobing
