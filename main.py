@@ -1,6 +1,7 @@
 from queue import SimpleQueue
 from threading import Lock
 from logic.filling import Filling
+from logic.order import Order
 from logic.taquero import Taquero, TaqueroConfig
 from logic.order_queue import OrderQueue
 
@@ -19,21 +20,21 @@ def generate_default_fillings():
         Filling(max_=50, name="tortilla"),
     ]
 
-def generate_order_replacer(queue):
-    # priority mapping
-    # 0 - New Order
-    # 1 - Order from Taquero
-    # 2 - Only Quesasdillas
-    priorities = [0, 0, 1, 1, 2]
-    pass
+def generate_default_quesadilla_stack():
+    return Filling(max_=5, name="quesadilla", available=5)
 
-adobada_fillings = generate_default_fillings
-adobada_config = TaqueroConfig(
-    name="Taquero Adobada",
-    types=["adobada"],
-    fillings=adobada_fillings,
-    lock=Lock,
-    send_to_master=send_to_master_queue
-)
+def generate_generic_taquero(name, types, scheduler):
+    fillings = generate_default_fillings()
+    quesadillas = generate_default_quesadilla_stack()
+    config = TaqueroConfig(
+        name="Taquero Adobada",
+        types=["adobada"],
+        fillings=fillings,
+        quesadillas=quesadillas,
+        lock=Lock,
+        send_to_master=send_to_master_queue,
+        scheduler=scheduler,
+    )
+    taquero = Taquero(config)
+    return taquero, fillings, quesadillas, config
 
-adobada_queue = OrderQueue()
