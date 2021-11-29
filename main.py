@@ -2,6 +2,7 @@ from queue import SimpleQueue
 from threading import Lock
 from logic.filling import Filling
 from logic.order import Order
+from logic.round_robin import RoundRobin
 from logic.taquero import Taquero, TaqueroConfig
 from logic.order_queue import OrderQueue
 
@@ -36,7 +37,12 @@ def generate_generic_taquero(name, types, scheduler):
         scheduler=scheduler,
     )
     taquero = Taquero(config)
-    return taquero, fillings, quesadillas, config
+    return {
+        "taquero": taquero, 
+        "fillings": fillings, 
+        "quesadillas": quesadillas, 
+        "config": config,
+    }
 
 def generate_order_replacer(queue: OrderQueue):
     # priority mapping
@@ -50,3 +56,14 @@ def generate_order_replacer(queue: OrderQueue):
         return queue.get(priority=priorities[index])
 
     return order_replacer
+
+def generate_scheduler():
+    elements = [None for _ in range(5)]
+    queue = OrderQueue()
+    replacer = generate_order_replacer(queue=queue)
+    scheduler = RoundRobin(elements=elements, job_replacer=replacer, lock=lock)
+    return {
+        "scheduler": scheduler,
+        "elements": elements,
+        "queue": queue,
+    }
