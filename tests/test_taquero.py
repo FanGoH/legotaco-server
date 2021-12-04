@@ -92,6 +92,7 @@ class TestTaquero(unittest.TestCase):
 
         self.assertEquals(remaining[0].quantity, 19)
         self.assertEquals(remaining[1].quantity, 29)
+        print(jsons.dumps(remaining[0]))
 
     def test_work_on_order_finish_sub_order(self):
         taquero, _, scheduler = self.generate_default_taquero(True)

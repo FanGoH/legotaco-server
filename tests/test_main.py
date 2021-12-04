@@ -12,7 +12,7 @@ SENTINEL_ORDER = {
             "type": "quesadilla",
             "meat": "suadero",
             "status": "open",
-            "quantity": 3,
+            "quantity": 27,
             "ingredients": [
                     "salsa",
             ]
@@ -31,7 +31,7 @@ def create_sentinel_order(sentinel_value):
                 "type": "quesadilla",
                 "meat": "suadero",
                 "status": "open",
-                "quantity": 3,
+                "quantity": 25,
                 "ingredients": [
                     "salsa",
                 ]
