@@ -116,7 +116,9 @@ class Taquero:
 
     def complete_order(self, order, handle):
         self.lock.acquire()
-        self.send_to_master(order)
+        # yes
+        if order is not None:
+            self.send_to_master(order)
         self.scheduler.complete_job(handle)
         self.lock.release()
 
