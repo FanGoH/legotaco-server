@@ -50,7 +50,10 @@ class Taquero:
         self.scheduler = config.scheduler
         self.send_to_master = config.send_to_master
         self.lock = config.lock
-        self.Fan = config.Fan()
+        self.Fan = config.Fan(Fanconfig)
+        self.amountPrepared = 0
+        self.resting = False
+        self.TimesRested = 0
         self.Fan.Launch()
 
     def work(self):
@@ -61,6 +64,12 @@ class Taquero:
         if not order: # just complete the non existent order to repopulate the scheduler
             self.complete_order(order, handle)
             return
+
+        if(self.amountPrepared // 100 > self.TimesRested):
+            self.TimesRested += 1
+            self.resting = True
+            sleep(3)
+            self.resting  =False
         
         remaining_quantum = QUANTUM
         work_performed = []
@@ -104,6 +113,7 @@ class Taquero:
             })
             sleep(prep_time * SPEEDUP)
             self.Fan.addTacos(amount)
+            self.amountPrepared += amount
 
         end = time.time()
 

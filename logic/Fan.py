@@ -17,10 +17,9 @@ class Fan:
         self.config = config
         self.turnedOn = False
 
-        pass
 
     def Launch():
-        l = Thread(target=self.watcher, args=()).start()
+         Thread(target=self.watcher, args=()).start()
 
     def addTacos(number:int = 1):
         if(not self.turnedOn):
