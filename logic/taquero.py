@@ -33,7 +33,6 @@ class TaqueroConfig:
     scheduler: Scheduler
     lock: Lock
     send_to_master: Callable[[Order, ], None]
-    Fan:Fan
 
 
 Fanconfig = FanConfig
@@ -51,11 +50,11 @@ class Taquero:
         self.scheduler = config.scheduler
         self.send_to_master = config.send_to_master
         self.lock = config.lock
-        self.Fan = config.Fan(Fanconfig)
+        self.Fan = Fan(Fanconfig)
         self.amountPrepared = 0
         self.resting = False
         self.TimesRested = 0
-        self.Fan.Launch()
+        #self.Fan.Launch()
 
     def work(self):
         self.scheduler.work_on_next(
@@ -69,7 +68,7 @@ class Taquero:
         if(self.amountPrepared // 100 > self.TimesRested):
             self.TimesRested += 1
             self.resting = True
-            sleep(3)
+            sleep(3 * SPEEDUP)
             self.resting  =False
         
         remaining_quantum = QUANTUM
