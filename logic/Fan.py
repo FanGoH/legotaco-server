@@ -1,4 +1,4 @@
-from _typeshed import Self
+
 from dataclasses import dataclass
 from threading import Thread
 import threading

@@ -3,12 +3,13 @@ import functools
 from threading import Lock
 from time import sleep
 import time
-from typing import Callable
-from Fan import Fan, FanConfig
+from typing import Callable, Dict, List
+from logic.Fan import FanConfig,Fan
 from logic.filling import Filling
 from logic.order import Order
 from logic.round_robin import Scheduler
-
+import jsons
+import json
 
 QUANTUM = 5
 
@@ -26,8 +27,8 @@ MAIN_PRODUCT_BASE_TIME = {
 @dataclass
 class TaqueroConfig:
     name: str
-    types: list[str]
-    fillings: dict[str, Filling]
+    types: List[str]
+    fillings: Dict[str, Filling]
     quesadillas: Filling
     scheduler: Scheduler
     lock: Lock
@@ -161,3 +162,11 @@ class Taquero:
             self.fillings["tortilla"].available -= amount
         for filling in tacos.ingredients:
             self.fillings[filling].available -= amount
+
+    def performLog(self):
+        f = open(f"{self.name}.json", 'w')
+        data =  json.load(f)
+        datas = jsons.dump(self)
+        data.append(datas)
+        json.dump(data,f)
+        
