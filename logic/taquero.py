@@ -4,7 +4,7 @@ from threading import Lock
 from time import sleep
 import time
 from typing import Callable
-
+from Fan import Fan, FanConfig
 from logic.filling import Filling
 from logic.order import Order
 from logic.round_robin import Scheduler
@@ -32,7 +32,13 @@ class TaqueroConfig:
     scheduler: Scheduler
     lock: Lock
     send_to_master: Callable[[Order, ], None]
+    Fan:Fan
 
+
+Fanconfig = FanConfig
+Fanconfig.Tacos = 0
+Fanconfig.TImeOn = 60
+Fanconfig.TimeToTrigger = 600
 
 class Taquero:
 
@@ -44,6 +50,8 @@ class Taquero:
         self.scheduler = config.scheduler
         self.send_to_master = config.send_to_master
         self.lock = config.lock
+        self.Fan = config.Fan()
+        self.Fan.Launch()
 
     def work(self):
         self.scheduler.work_on_next(
@@ -86,7 +94,7 @@ class Taquero:
             self.lock.release()
 
             prep_time = self.calculate_preparation_time(tacos, amount)
-
+            
             work_performed.append({
                 "amount": amount,
                 "fillings": tacos.ingredients,
@@ -95,6 +103,7 @@ class Taquero:
                 "prep_time": prep_time,
             })
             sleep(prep_time * SPEEDUP)
+            self.Fan.addTacos(amount)
 
         end = time.time()
 
