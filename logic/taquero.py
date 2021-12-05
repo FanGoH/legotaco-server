@@ -111,7 +111,9 @@ class Taquero:
                 "meat": tacos.meat,
                 "prep_time": prep_time,
             })
+            
             sleep(prep_time * SPEEDUP)
+
             self.Fan.addTacos(amount)
             self.amountPrepared += amount
 

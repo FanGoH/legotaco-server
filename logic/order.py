@@ -70,8 +70,9 @@ class Order:
 
     def is_completed(self):
         total = 0
-        for sub in self.sub_orders.values():
-            total += sub.quantity
+        for sub_orders in self.sub_orders.values():
+            for sub_order in sub_orders:
+                total += sub_order.quantity
         return total == 0
 
     def get_sub_orders_of_type(self, type_) -> List[SubOrder]:

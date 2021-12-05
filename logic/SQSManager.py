@@ -1,4 +1,4 @@
-from order import Order
+from logic.order import Order
 import boto3
 import json
 import random
@@ -71,12 +71,12 @@ class SQSManager:
 
     def complete_Order(self, order: Order):
         self.client.delete_message(
-            QueueUrl=self.queues(order.index),
+            QueueUrl=self.queues[order.index],
             ReceiptHandle=order.get_handle()
         )
         self.client.send_message(
-            QueueUrl=self.responseQueues(order.index),
-            Message=jsons.dumps(order.raw_order)
+            QueueUrl=self.responseQueues[order.index],
+            MessageBody=jsons.dumps(order)
         )
 
 if __name__ == "__main__":

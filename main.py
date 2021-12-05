@@ -1,8 +1,9 @@
 from queue import SimpleQueue
-from threading import Lock
+from threading import Lock, Thread
 from logic.chalan import Chalan
 from logic.data_classes import GeneratedScheduler, GenericTaquero
 from logic.filling import Filling
+from logic.master_scheduler import MasterScheduler
 from logic.round_robin import RoundRobin
 from logic.taquero import Taquero, TaqueroConfig
 from logic.order_queue import OrderQueue
@@ -69,6 +70,11 @@ def generate_scheduler():
         "queue": queue,
     })
 
+
+def put_taquero_to_work(taquero):
+    while True:
+        taquero.work()
+
 if __name__ == "__main__":
     scheduler_adobada = generate_scheduler()
     taquero_adobada = generate_generic_taquero(
@@ -96,6 +102,28 @@ if __name__ == "__main__":
         scheduler=scheduler_tripa.scheduler
     )
 
-    chalan_adobada_asada = Chalan([taquero_adobada.fillings, taquero_asada_1.fillings])
-    chalan_tripa_asada = Chalan([taquero_tripa.fillings, taquero_asada_2.fillings])
+    chalan_adobada_asada = Chalan([taquero_adobada.fillings, taquero_asada_1.fillings], lock)
+    chalan_tripa_asada = Chalan([taquero_tripa.fillings, taquero_asada_2.fillings], lock)
 
+    master_scheduler = MasterScheduler({
+        "asada": scheduler_asada.queue,
+        "suadero": scheduler_asada.queue,
+        "tripa": scheduler_tripa.queue,
+        "cabeza": scheduler_tripa.queue,
+        "adobada": scheduler_adobada.queue,
+    }, lock)
+
+    taquero_adobada_thread = Thread(target=put_taquero_to_work, args=(taquero_adobada,))
+    taquero_asada_1_thread = Thread(target=put_taquero_to_work, args=(taquero_asada_1,))
+    taquero_asada_2_thread = Thread(target=put_taquero_to_work, args=(taquero_asada_2,))
+    taquero_tripa_thread = Thread(target=put_taquero_to_work, args=(taquero_tripa,))
+
+    taquero_adobada_thread.start()
+    taquero_asada_1_thread.start()
+    taquero_asada_2_thread.start()
+    taquero_tripa_thread.start()
+    
+
+    while True:
+        print("Working :)")
+        master_scheduler.tick()

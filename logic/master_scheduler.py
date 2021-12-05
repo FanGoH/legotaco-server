@@ -20,7 +20,7 @@ class MasterScheduler:
         self.queue_types = self.get_types_of_queues(taco_queues)
         self.returns_queue = Queue()
 
-        self.queue_trackers = {queue: QueueTracker() for queue in set(taco_queues.values())}
+        self.queue_trackers = {queue: QueueTracker(meats) for queue, meats in self.queue_types.items()}
 
         self.estimated_queue_wait = {queue: 0 for queue in set(taco_queues.values())}
 
