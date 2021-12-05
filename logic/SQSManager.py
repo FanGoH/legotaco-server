@@ -5,7 +5,7 @@ import random
 import jsons
 
 
-class sqs_manager:
+class SQSManager:
 
     def __init__(self, ReadeableQueuesUrl: list, ResponseQueueUrl: list):
         self.queues = ReadeableQueuesUrl
@@ -17,7 +17,7 @@ class sqs_manager:
         for idx, sqs in enumerate(self.queues):
             results = self.client.receive_message(
                 QueueUrl=sqs)
-            if(len(results['Messages']) <= 0):
+            if 'Messages' not in results:
                 return None
             raw_order = json.loads(results['Messages'][0]['Body'])
             raw_order['handle'] = results['Messages'][0]['ReceiptHandle']
@@ -82,7 +82,7 @@ class sqs_manager:
 if __name__ == "__main__":
     queue = ["https://sqs.us-east-1.amazonaws.com/292274580527/sqs_cc106_team_1"]
 
-    Manager = sqs_manager(queue, [])
+    Manager = SQSManager(queue, [])
 
     order = Manager.getOrder()
 

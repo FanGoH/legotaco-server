@@ -74,6 +74,9 @@ class Order:
     def get_remaining_parts_of_type(self, type_):
         return list(filter(lambda o: o.quantity > 0, self.get_sub_orders_of_type(type_)))
 
+    def get_amount_remaining_of_type(self, type_, class_="taco"):
+        return sum(map(lambda o: o.quantity, filter(lambda o: o.type == class_, self.get_remaining_parts_of_type(type_))))
+
     # {
     #     "who": "asignador",
     #     "when": "2021-09-14 16:15:55.421215",
