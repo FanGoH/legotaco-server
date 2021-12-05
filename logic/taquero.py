@@ -54,7 +54,7 @@ class Taquero:
         self.amountPrepared = 0
         self.resting = False
         self.TimesRested = 0
-        #self.Fan.Launch()
+        self.Fan.Launch()
 
     def work(self):
         self.scheduler.work_on_next(

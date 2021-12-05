@@ -19,8 +19,7 @@ class Fan:
 
 
     def Launch(self):
-         pass
-         Thread(target=self.watcher, args=()).start()
+         Thread(target=self.watcher).start()
 
     def addTacos(self,number:int = 1):
         if(not self.turnedOn):
@@ -29,7 +28,9 @@ class Fan:
 
     def watcher(self):
         while True:
+            
             if(self.config.Tacos % self.config.TimeToTrigger == 0 and self.config.Tacos):
+                print("UWU")
                 l = Thread(target=self.TurnFan,args=())
                 l.start()
                 l.join()
