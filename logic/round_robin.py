@@ -35,10 +35,10 @@ class RoundRobin(Scheduler):
             self.working[self.i] = True
 
             element = self._get_current_element()
-            self.lock.release()
         except Exception as error:
-            self.lock.release()
             raise error
+        finally:
+            self.lock.release()
 
         # the worker needs to be called outside the lock
         # -> allows multiple elements to be worked on at the same time
