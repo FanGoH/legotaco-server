@@ -1,4 +1,4 @@
-from _typeshed import Self
+
 from dataclasses import dataclass
 from threading import Thread
 import threading
@@ -18,22 +18,24 @@ class Fan:
         self.turnedOn = False
 
 
-    def Launch():
-         Thread(target=self.watcher, args=()).start()
+    def Launch(self):
+         Thread(target=self.watcher).start()
 
-    def addTacos(number:int = 1):
+    def addTacos(self,number:int = 1):
         if(not self.turnedOn):
             self.config.Tacos +=number
 
 
-    def watcher():
+    def watcher(self):
         while True:
+            
             if(self.config.Tacos % self.config.TimeToTrigger == 0 and self.config.Tacos):
+                print("UWU")
                 l = Thread(target=self.TurnFan,args=())
                 l.start()
                 l.join()
 
-    def TurnFan():
+    def TurnFan(self):
         self.turnedOn = True
         sleep(self.TimeOn)
         self.turnedOn = False

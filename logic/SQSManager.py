@@ -86,4 +86,4 @@ if __name__ == "__main__":
 
     order = Manager.getOrder()
 
-    print(order.raw_order())
+    print(order.raw_order)
