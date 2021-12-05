@@ -2,6 +2,8 @@ from queue import Queue
 from threading import Lock
 from typing import Dict, List
 from logic.SQSManager import SQSManager
+from logic.master_helpers.order_helper import OrderRemaining
+from logic.master_helpers.queue_tracker import QueueTracker
 from logic.order import Order
 
 from logic.order_queue import OrderQueue
@@ -11,14 +13,16 @@ sqs_manager = SQSManager(
     ["https://sqs.us-east-1.amazonaws.com/292274580527/sqs_cc106_team_1_response"]
 )
 
+
 class MasterScheduler:
     def __init__(self, taco_queues: Dict[str, OrderQueue], lock:Lock):
         self.queues = taco_queues
         self.queue_types = self.get_types_of_queues(taco_queues)
         self.returns_queue = Queue()
 
-        self.estimated_queue_wait = {queue: 0 for queue in set(taco_queues.items())}
-        self.order_history = {}
+        self.queue_trackers = {queue: QueueTracker() for queue in set(taco_queues.values())}
+
+        self.estimated_queue_wait = {queue: 0 for queue in set(taco_queues.values())}
 
         self.meat_types = taco_queues.keys()
 
@@ -34,36 +38,24 @@ class MasterScheduler:
             if not queue in types_by_queue:
                 types_by_queue[queue] = []
             types_by_queue[queue].append(type)
+        return types_by_queue
 
-    # When an order is "finished" from a taquero it is returned to here
-    def return_order(self, order: Order, meat):
-        # A type of order can only have 1 assigned queue
-        queue = self.queue_types[meat]
-        
-        # We know that the order was worked on by some amount
-        # And that it belongs to a certain queue
-        # If the amount remaining before entering the queue is known
-        # and the current amount remaining is also known
-        # updating the estimated remaining items in the queue consists of
-        # total -= (current - prev)
-        prev = self.order_history[order].get(queue, 0)
-        current = order.get_amount_remaining_of_type(type_=meat, class_="taco") # ???
-        delta = current - prev
-        self.estimated_queue_wait[queue] -= delta
-
-        self.order_history[order][queue] = current
+    # When a taquero cannot do anything else on an order, it comes to here
+    # :)
+    def return_order(self, order: Order, queue: OrderQueue):
+        self.queue_trackers[queue].remove_order(order)
+        self.returns_queue.put(order)
 
     def complete_order(self, order):
-        del self.order_history[order]
         sqs_manager.complete_Order(order)
 
     def load_order(self):
         order = sqs_manager.getOrder()
-        self.order_history[order] = {}
         return order
 
-    def tick(self):
-        priority = 0
+    def __get_next_order(self):
+        order = None
+        priority = None
         # evental consistency is good enough
         if self.returns_queue.qsize() > 0:
             # when there is a "finished order" to be rescheduled
@@ -76,41 +68,64 @@ class MasterScheduler:
             # when we need to grab a new order from the sqs
             order: Order = self.load_order()
             priority = 0
+        return order, priority
+    
+    def __get_remaining_for_order_per_queue(self, order: Order):
+        remaining: Dict[OrderQueue, OrderRemaining] = {}
+        for queue, meats in self.queue_types.items():
+            if queue not in remaining:
+                remaining[queue] = OrderRemaining()
+            for meat in meats:
+                remaining[queue].taco += order.get_amount_remaining_of_type(meat, "taco")
+                remaining[queue].quesadilla += order.get_amount_remaining_of_type(meat, "quesadilla")
+        return {queue:remaining for queue, remaining in remaining.items() if remaining.quesadilla > 0 and remaining.taco > 0}
 
-        if not order:
-            return
+    def __find_suitable_queue(self, order: Order):
+        remaining = self.__get_remaining_for_order_per_queue(order)
 
-        # uh uh uh uh uh uh uh uh
-        amount_by_type = { meat: order.get_amount_remaining_of_type(meat, "taco") for meat in self.meat_types}
-        # find minimum kiwi
+        min_taco_remaining = 1E100
         min_queue = None
-        min_amount = 1E100
-        min_type = None
-        for meat in self.meat_types:
-            if amount_by_type[meat] <= 0:
+        # find the order that has the least amount of tacos scheduled
+        for queue, order_remaining in remaining.items():
+            # if the order has no tacos to be prepared for this queue
+            # just continue
+            if order_remaining.taco == 0:
                 continue
 
-            queue = self.queues[meat]
-            queued_amount = self.estimated_queue_wait[queue]
-            if queued_amount < min_amount:
-                min_amount = queued_amount 
-                min_type = meat
+            tracker = self.queue_trackers[queue]
+            queue_remaining = tracker.count_remaining()
+            if queue_remaining.taco < min_taco_remaining:
                 min_queue = queue
+                min_taco_remaining = queue_remaining.taco
+        return min_queue
+
+    def __find_quesadilla_queue(self, order: Order):
+        order_remaining = self.__get_remaining_for_order_per_queue(order)
+
+        for queue, remaining in order_remaining.items():
+            if remaining.quesadilla > 0:
+                return queue
+
+
+    def tick(self):
+        order, priority = self.__get_next_order()
+
+        # There are no orders to be assigned
+        if not order:
+            return
         
-        if not min_queue:
-            # the order only has quesadillas remaining
-            for meat in self.meat_types: 
-                if order.get_amount_of_quesadillas(meat) > 0:
-                    self.queues[meat].put(2, order)
-                    return
-            # the order is completed
+        if order.is_completed():
             self.complete_order(order)
             return
 
-        # update the order
-        # i am not sure if just adding works
-        # assumes that the turn works on all the elements of the queue
-        self.estimated_queue_wait[min_queue] += amount_by_type[min_type]
-        self.order_history[order][min_queue] = amount_by_type[min_type]
-        min_queue.put(priority, order)
+        destination_queue = self.__find_suitable_queue(order)
 
+        # the order only has quesadillas
+        if destination_queue is None:
+            destination_queue = self.__find_quesadilla_queue(order)
+            priority = 2 # Priority 2 is quesadilla order
+            return
+        
+        destination_queue.put(priority, order)
+        
+        # done

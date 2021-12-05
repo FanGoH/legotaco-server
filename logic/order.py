@@ -1,4 +1,4 @@
-from typing import List
+from typing import Dict, List
 #    {
 #             "part_id": "1-0",
 #             "type": "taco",
@@ -61,12 +61,18 @@ class Order:
     def __init__(self, raw_order, index_queue=0):
         self.raw_order = raw_order
         self.index = index_queue
-        self.sub_orders = {}
+        self.sub_orders: Dict[str, SubOrder] = {}
         for sub_order in raw_order["orden"]:
             meat_type = sub_order["meat"]
             if meat_type not in self.sub_orders:
                 self.sub_orders[meat_type] = []
             self.sub_orders[meat_type].append(SubOrder(sub_order))
+
+    def is_completed(self):
+        total = 0
+        for sub in self.sub_orders.values():
+            total += sub.quantity
+        return total == 0
 
     def get_sub_orders_of_type(self, type_) -> List[SubOrder]:
         return self.sub_orders.get(type_, [])
