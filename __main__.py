@@ -1,4 +1,5 @@
 from queue import SimpleQueue
+from logic.sockets import server
 
 class PriorityQueue:
  def __init__(self):
@@ -13,5 +14,4 @@ def RoundRobin():
 def Taqueria():
     pass
 
-
-print("Hello World")
+server()
