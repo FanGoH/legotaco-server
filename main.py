@@ -81,8 +81,8 @@ def put_taquero_to_work(taquero):
         sleep(1 * SPEEDUP)
 
 if __name__ == "__main__":
+    scheduler_asada = generate_scheduler() 
     scheduler_adobada = generate_scheduler()
-    scheduler_asada = generate_scheduler()
     scheduler_tripa = generate_scheduler()
 
     master_scheduler = MasterScheduler({

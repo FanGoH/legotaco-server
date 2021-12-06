@@ -176,7 +176,7 @@ class Taquero:
         self.lock.release()
 
     def is_order_complete(self, order):
-        return len(self.get_order_todo(order)) == 0
+        return len(self.get_order_todo_tacos(order)) == 0
 
     def get_order_todo(self, order):
         raw_todo = map(lambda type: order.get_remaining_parts_of_type(type), self.types)
@@ -185,6 +185,14 @@ class Taquero:
         taco_parts = filter(lambda todo_: todo_.type == "taco", todo)
         quesadilla_parts = filter(lambda todo_: todo_.type == "quesadilla", todo)
         todo = [*taco_parts, *quesadilla_parts]
+
+        # print(f"{self.name} - this is what i have to do: ", todo)
+        return todo
+
+    def get_order_todo_tacos(self, order):
+        raw_todo = map(lambda type: order.get_remaining_parts_of_type(type), self.types)
+        todo = functools.reduce(lambda p, c: [*p, *c], raw_todo, [])
+        todo = list(filter(lambda todo_: todo_.type == "taco", todo))
 
         # print(f"{self.name} - this is what i have to do: ", todo)
         return todo
