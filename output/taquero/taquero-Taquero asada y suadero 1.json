@@ -7,127 +7,7 @@
     "preparar": [
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:22.001340",
-            "what": [],
-            "time": 0.0
-        }
-    ]
-}
-}": 5,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 5.0
-                }
-            ],
-            "time": 0.005409717559814453
-        }
-    ]
-}           },
-                {
-                    "amount": 4,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 4.0
-                }
-            ],
-            "time": 0.015040159225463867
-        }
-    ]
-}          "fillings": [
-                        "salsa",
-                        "cebolla"
-                    ],
-                    "type": "taco",
-                    "meat": "asada",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.011217117309570312
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:48:20.727907",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "salsa",
-                        "cebolla"
-                    ],
-                    "type": "taco",
-                    "meat": "asada",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.010886192321777344
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:48:20.757863",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 5.0
-                }
-            ],
-            "time": 0.005861043930053711
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:48:20.767646",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 5.0
-                }
-            ],
-            "time": 0.007013797760009766
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:48:20.786372",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro",
-                        "salsa"
-                    ],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.014544010162353516
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:48:20.804131",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro",
-                        "salsa"
-                    ],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.011240959167480469
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:48:20.811411",
+            "when": "2021-12-05 19:53:16.276887",
             "what": [
                 {
                     "amount": 1,
@@ -137,40 +17,10 @@
                     "prep_time": 1.0
                 }
             ],
-            "time": 0.0025408267974853516
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:11.749707",
-            "what": [
-                {
-                    "amount": 4,
-                    "fillings": [
-                        "cilantro",
-                        "salsa",
-                        "guacamole"
-                    ],
-                    "type": "quesadilla",
-                    "meat": "suadero",
-                    "prep_time": 6.0
-                }
-            ],
-            "time": 0.006212949752807617
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:11.799999",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [
-                        "salsa",
-                        "cebolla"
-                    ],
-                    "type": "taco",
-                    "meat": "asada",
-                    "prep_time": 2.0
-                },
+            "time": 0.0012400150299072266
+        }
+    ]
+}          },
                 {
                     "amount": 4,
                     "fillings": [],
@@ -179,53 +29,11 @@
                     "prep_time": 4.0
                 }
             ],
-            "time": 0.007782936096191406
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:11.824565",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 5.0
-                }
-            ],
-            "time": 0.0063018798828125
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:11.878103",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 5.0
-                }
-            ],
-            "time": 0.0073642730712890625
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:11.883223",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 1.0
-                }
-            ],
-            "time": 0.0012481212615966797
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:11.951906",
+            "time": 0.009164094924926758
+        }
+    ]
+}ero asada y suadero 1",
+            "when": "2021-12-05 19:53:07.417929",
             "what": [
                 {
                     "amount": 5,
@@ -238,11 +46,11 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.012574911117553711
+            "time": 0.012516021728515625
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:11.997635",
+            "when": "2021-12-05 19:53:07.434575",
             "what": [
                 {
                     "amount": 5,
@@ -255,11 +63,11 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.010623931884765625
+            "time": 0.011046171188354492
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.012402",
+            "when": "2021-12-05 19:53:07.449841",
             "what": [
                 {
                     "amount": 5,
@@ -272,11 +80,28 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.011693716049194336
+            "time": 0.013693094253540039
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.027819",
+            "when": "2021-12-05 19:53:07.470380",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.013051748275756836
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:07.512836",
             "what": [
                 {
                     "amount": 5,
@@ -288,11 +113,11 @@
                     "prep_time": 7.5
                 }
             ],
-            "time": 0.009389162063598633
+            "time": 0.00949716567993164
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.040043",
+            "when": "2021-12-05 19:53:07.539948",
             "what": [
                 {
                     "amount": 5,
@@ -304,35 +129,11 @@
                     "prep_time": 7.5
                 }
             ],
-            "time": 0.008730888366699219
+            "time": 0.012441158294677734
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.061234",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.760414",
-            "what": [
-                {
-                    "amount": 4,
-                    "fillings": [
-                        "cilantro",
-                        "salsa",
-                        "guacamole"
-                    ],
-                    "type": "quesadilla",
-                    "meat": "suadero",
-                    "prep_time": 6.0
-                }
-            ],
-            "time": 0.007539987564086914
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.803404",
+            "when": "2021-12-05 19:53:07.769723",
             "what": [
                 {
                     "amount": 5,
@@ -345,11 +146,11 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.013592958450317383
+            "time": 0.014402151107788086
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.858200",
+            "when": "2021-12-05 19:53:07.790586",
             "what": [
                 {
                     "amount": 5,
@@ -362,11 +163,11 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.012599945068359375
+            "time": 0.01211094856262207
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.879914",
+            "when": "2021-12-05 19:53:07.815733",
             "what": [
                 {
                     "amount": 5,
@@ -379,11 +180,11 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.012206792831420898
+            "time": 0.014125823974609375
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.898833",
+            "when": "2021-12-05 19:53:07.838697",
             "what": [
                 {
                     "amount": 5,
@@ -396,96 +197,27 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.013518095016479492
+            "time": 0.015625
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.919201",
+            "when": "2021-12-05 19:53:07.878861",
             "what": [
                 {
                     "amount": 5,
                     "fillings": [
-                        "cilantro",
                         "salsa"
                     ],
                     "type": "taco",
                     "meat": "suadero",
-                    "prep_time": 10.0
+                    "prep_time": 7.5
                 }
             ],
-            "time": 0.01252293586730957
+            "time": 0.009419918060302734
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.937040",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro",
-                        "salsa"
-                    ],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.013271093368530273
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.950638",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "salsa",
-                        "cebolla"
-                    ],
-                    "type": "taco",
-                    "meat": "asada",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.010440826416015625
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.971786",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "salsa",
-                        "cebolla"
-                    ],
-                    "type": "taco",
-                    "meat": "asada",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.011903047561645508
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:12.990428",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "salsa",
-                        "cebolla"
-                    ],
-                    "type": "taco",
-                    "meat": "asada",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.010914802551269531
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:13.000153",
+            "when": "2021-12-05 19:53:07.888203",
             "what": [
                 {
                     "amount": 2,
@@ -497,25 +229,86 @@
                     "prep_time": 3.0
                 }
             ],
-            "time": 0.0047152042388916016
+            "time": 0.004705905914306641
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:13.114794",
+            "when": "2021-12-05 19:53:08.367033",
+            "what": [],
+            "time": 9.5367431640625e-07
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:08.541824",
+            "what": [],
+            "time": 9.5367431640625e-07
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:08.653077",
+            "what": [],
+            "time": 1.1920928955078125e-06
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:08.667223",
+            "what": [],
+            "time": 0.0
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:08.710874",
             "what": [
                 {
                     "amount": 5,
-                    "fillings": [],
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
                     "type": "taco",
                     "meat": "suadero",
-                    "prep_time": 5.0
+                    "prep_time": 10.0
                 }
             ],
-            "time": 0.005635261535644531
+            "time": 0.010677099227905273
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:13.639232",
+            "when": "2021-12-05 19:53:08.727171",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.011490106582641602
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:08.751597",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.015162229537963867
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:08.770772",
             "what": [
                 {
                     "amount": 4,
@@ -529,11 +322,39 @@
                     "prep_time": 6.0
                 }
             ],
-            "time": 0.008255958557128906
+            "time": 0.009823083877563477
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:13.707961",
+            "when": "2021-12-05 19:53:08.803533",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 0.010754108428955078
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:09.873328",
+            "what": [],
+            "time": 1.1920928955078125e-06
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:10.107524",
+            "what": [],
+            "time": 9.5367431640625e-07
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:10.147283",
             "what": [
                 {
                     "amount": 5,
@@ -546,11 +367,11 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.011092901229858398
+            "time": 0.010026931762695312
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:13.727328",
+            "when": "2021-12-05 19:53:10.176095",
             "what": [
                 {
                     "amount": 5,
@@ -563,11 +384,11 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.01215982437133789
+            "time": 0.014196157455444336
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:13.747902",
+            "when": "2021-12-05 19:53:10.215236",
             "what": [
                 {
                     "amount": 5,
@@ -580,11 +401,44 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.013187885284423828
+            "time": 0.013475894927978516
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:13.840451",
+            "when": "2021-12-05 19:53:10.248138",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.011976003646850586
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:10.267369",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 0.012620925903320312
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:10.308997",
             "what": [
                 {
                     "amount": 2,
@@ -596,17 +450,11 @@
                     "prep_time": 3.0
                 }
             ],
-            "time": 0.0037660598754882812
+            "time": 0.0197141170501709
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.410705",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.441891",
+            "when": "2021-12-05 19:53:10.400130",
             "what": [
                 {
                     "amount": 5,
@@ -619,11 +467,11 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.012989044189453125
+            "time": 0.011880874633789062
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.458957",
+            "when": "2021-12-05 19:53:10.479246",
             "what": [
                 {
                     "amount": 5,
@@ -636,11 +484,11 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.012516975402832031
+            "time": 0.018327951431274414
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.495165",
+            "when": "2021-12-05 19:53:10.502014",
             "what": [
                 {
                     "amount": 5,
@@ -653,28 +501,11 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.012536764144897461
+            "time": 0.010702848434448242
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.514075",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro",
-                        "salsa"
-                    ],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.01203608512878418
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.546942",
+            "when": "2021-12-05 19:53:10.538834",
             "what": [
                 {
                     "amount": 5,
@@ -686,17 +517,11 @@
                     "prep_time": 7.5
                 }
             ],
-            "time": 0.0089569091796875
+            "time": 0.010293722152709961
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.590022",
-            "what": [],
-            "time": 2.1457672119140625e-06
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.624571",
+            "when": "2021-12-05 19:53:10.556383",
             "what": [
                 {
                     "amount": 5,
@@ -709,139 +534,11 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.012763023376464844
+            "time": 0.011338949203491211
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.663535",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "salsa",
-                        "cebolla"
-                    ],
-                    "type": "taco",
-                    "meat": "asada",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.011409282684326172
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.679669",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.700619",
-            "what": [
-                {
-                    "amount": 4,
-                    "fillings": [
-                        "cilantro",
-                        "salsa",
-                        "guacamole"
-                    ],
-                    "type": "quesadilla",
-                    "meat": "suadero",
-                    "prep_time": 6.0
-                }
-            ],
-            "time": 0.00764012336730957
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.791779",
-            "what": [
-                {
-                    "amount": 3,
-                    "fillings": [
-                        "cilantro",
-                        "salsa",
-                        "guacamole"
-                    ],
-                    "type": "quesadilla",
-                    "meat": "suadero",
-                    "prep_time": 4.5
-                }
-            ],
-            "time": 0.006342887878417969
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.821101",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [
-                        "cilantro",
-                        "salsa",
-                        "guacamole"
-                    ],
-                    "type": "quesadilla",
-                    "meat": "suadero",
-                    "prep_time": 1.5
-                }
-            ],
-            "time": 0.0032188892364501953
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.943476",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro",
-                        "salsa"
-                    ],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.012603998184204102
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:14.978979",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro",
-                        "salsa"
-                    ],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.011150121688842773
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:15.049284",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro",
-                        "salsa"
-                    ],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.013810157775878906
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:15.140429",
+            "when": "2021-12-05 19:53:10.572844",
             "what": [
                 {
                     "amount": 5,
@@ -853,99 +550,110 @@
                     "prep_time": 7.5
                 }
             ],
-            "time": 0.009608030319213867
+            "time": 0.009088993072509766
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:15.153450",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:15.408240",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:15.436094",
+            "when": "2021-12-05 19:53:10.612169",
             "what": [
                 {
                     "amount": 5,
                     "fillings": [
-                        "salsa",
-                        "cebolla"
+                        "cilantro",
+                        "salsa"
                     ],
                     "type": "taco",
-                    "meat": "asada",
+                    "meat": "suadero",
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.011688947677612305
+            "time": 0.013464689254760742
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:15.462046",
+            "when": "2021-12-05 19:53:10.652287",
             "what": [
                 {
                     "amount": 5,
                     "fillings": [
-                        "salsa",
-                        "cebolla"
+                        "cilantro",
+                        "salsa"
                     ],
                     "type": "taco",
-                    "meat": "asada",
+                    "meat": "suadero",
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.015156030654907227
+            "time": 0.013426780700683594
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:15.502764",
+            "when": "2021-12-05 19:53:10.686591",
             "what": [
                 {
                     "amount": 5,
-                    "fillings": [],
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
                     "type": "taco",
                     "meat": "suadero",
-                    "prep_time": 5.0
+                    "prep_time": 10.0
                 }
             ],
-            "time": 0.01035308837890625
+            "time": 0.010987043380737305
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:15.546309",
+            "when": "2021-12-05 19:53:10.762412",
             "what": [
                 {
                     "amount": 5,
-                    "fillings": [],
+                    "fillings": [
+                        "salsa"
+                    ],
                     "type": "taco",
                     "meat": "suadero",
-                    "prep_time": 5.0
+                    "prep_time": 7.5
                 }
             ],
-            "time": 0.007673025131225586
+            "time": 0.01662588119506836
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:15.570351",
+            "when": "2021-12-05 19:53:10.792360",
             "what": [
                 {
                     "amount": 5,
-                    "fillings": [],
+                    "fillings": [
+                        "salsa"
+                    ],
                     "type": "taco",
                     "meat": "suadero",
-                    "prep_time": 5.0
+                    "prep_time": 7.5
                 }
             ],
-            "time": 0.0061528682708740234
+            "time": 0.011427879333496094
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:15.574836",
+            "when": "2021-12-05 19:53:10.829674",
+            "what": [
+                {
+                    "amount": 2,
+                    "fillings": [
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 3.0
+                }
+            ],
+            "time": 0.016329050064086914
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:10.899737",
             "what": [
                 {
                     "amount": 1,
@@ -953,408 +661,188 @@
                     "type": "taco",
                     "meat": "suadero",
                     "prep_time": 1.0
-                }
-            ],
-            "time": 0.0012469291687011719
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:15.591068",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:15.971977",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:16.168473",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:16.259076",
-            "what": [],
-            "time": 1.1920928955078125e-06
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:16.340626",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:16.428898",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:16.604796",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:16.758685",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.360572",
-            "what": [
-                {
-                    "amount": 4,
-                    "fillings": [
-                        "cilantro",
-                        "salsa",
-                        "guacamole"
-                    ],
-                    "type": "quesadilla",
-                    "meat": "suadero",
-                    "prep_time": 6.0
-                }
-            ],
-            "time": 0.011391401290893555
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.428041",
-            "what": [],
-            "time": 1.1920928955078125e-06
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.465170",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro",
-                        "salsa"
-                    ],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.012938976287841797
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.531867",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro",
-                        "salsa"
-                    ],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.01336812973022461
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.557953",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro",
-                        "salsa"
-                    ],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.0140380859375
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.573585",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "salsa"
-                    ],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.012472867965698242
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.660565",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.740788",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.748979",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.784202",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "salsa",
-                        "cebolla"
-                    ],
-                    "type": "taco",
-                    "meat": "asada",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.013195037841796875
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.867170",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [
-                        "salsa",
-                        "cebolla"
-                    ],
-                    "type": "taco",
-                    "meat": "asada",
-                    "prep_time": 2.0
-                },
-                {
-                    "amount": 4,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 4.0
-                }
-            ],
-            "time": 0.00921487808227539
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.892993",
-            "what": [
-                {
-                    "amount": 4,
-                    "fillings": [
-                        "cilantro",
-                        "salsa",
-                        "guacamole"
-                    ],
-                    "type": "quesadilla",
-                    "meat": "suadero",
-                    "prep_time": 6.0
-                }
-            ],
-            "time": 0.009032011032104492
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.940317",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 5.0
-                }
-            ],
-            "time": 0.007589817047119141
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:17.972869",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "salsa",
-                        "cebolla"
-                    ],
-                    "type": "taco",
-                    "meat": "asada",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.012798309326171875
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:18.003226",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 5.0
-                }
-            ],
-            "time": 0.007906198501586914
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:18.028345",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 5.0
-                }
-            ],
-            "time": 0.007766008377075195
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:18.058299",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 5.0
-                }
-            ],
-            "time": 0.008050203323364258
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:18.086903",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 5.0
-                }
-            ],
-            "time": 0.006713151931762695
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:18.122480",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 5.0
-                }
-            ],
-            "time": 0.0094451904296875
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:18.142709",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:18.216153",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:18.987328",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:19.015187",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "salsa",
-                        "cebolla"
-                    ],
-                    "type": "taco",
-                    "meat": "asada",
-                    "prep_time": 10.0
-                }
-            ],
-            "time": 0.013397932052612305
-        },
-        {
-            "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:19.109007",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [],
-                    "type": "taco",
-                    "meat": "suadero",
-                    "prep_time": 5.0
                 }
             ],
             "time": 0.005760908126831055
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:19.213583",
+            "when": "2021-12-05 19:53:10.934640",
             "what": [],
             "time": 0.0
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:19.809656",
+            "when": "2021-12-05 19:53:10.958820",
+            "what": [],
+            "time": 1.1920928955078125e-06
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.034555",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.012073278427124023
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.101976",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.02130889892578125
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.167012",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.017445087432861328
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.205815",
+            "what": [],
+            "time": 1.1920928955078125e-06
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.235298",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 0.011871099472045898
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.262568",
+            "what": [
+                {
+                    "amount": 2,
+                    "fillings": [
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 3.0
+                }
+            ],
+            "time": 0.005136966705322266
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.280620",
+            "what": [],
+            "time": 0.0
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.308600",
             "what": [],
             "time": 9.5367431640625e-07
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:20.334767",
+            "when": "2021-12-05 19:53:11.342302",
             "what": [
                 {
                     "amount": 5,
-                    "fillings": [
-                        "cilantro",
-                        "salsa"
-                    ],
+                    "fillings": [],
                     "type": "taco",
                     "meat": "suadero",
-                    "prep_time": 10.0
+                    "prep_time": 5.0
                 }
             ],
-            "time": 0.012359857559204102
+            "time": 0.005955934524536133
         },
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:49:20.363379",
+            "when": "2021-12-05 19:53:11.395329",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 5.0
+                }
+            ],
+            "time": 0.006265878677368164
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.502254",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 5.0
+                }
+            ],
+            "time": 0.010299205780029297
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.568791",
+            "what": [
+                {
+                    "amount": 1,
+                    "fillings": [],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 1.0
+                }
+            ],
+            "time": 0.0012311935424804688
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.582395",
+            "what": [],
+            "time": 9.5367431640625e-07
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.688348",
             "what": [
                 {
                     "amount": 5,
@@ -1367,7 +855,308 @@
                     "prep_time": 10.0
                 }
             ],
-            "time": 0.012517929077148438
+            "time": 0.014130830764770508
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.701893",
+            "what": [],
+            "time": 0.0
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.776531",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.011644840240478516
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.822679",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.012904882431030273
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.860027",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.013083219528198242
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.897973",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.013968944549560547
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.936414",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 0.0077478885650634766
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:11.976080",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 0.009250879287719727
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:12.013274",
+            "what": [
+                {
+                    "amount": 2,
+                    "fillings": [
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 3.0
+                }
+            ],
+            "time": 0.007688283920288086
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:12.106071",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "asada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.010389089584350586
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:12.142465",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "asada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.011494874954223633
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:12.178060",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "asada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.012486934661865234
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:12.220033",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "asada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.011245012283325195
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:12.274972",
+            "what": [
+                {
+                    "amount": 1,
+                    "fillings": [
+                        "salsa",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "asada",
+                    "prep_time": 2.0
+                },
+                {
+                    "amount": 4,
+                    "fillings": [],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 4.0
+                }
+            ],
+            "time": 0.019774913787841797
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:12.310487",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 5.0
+                }
+            ],
+            "time": 0.006467103958129883
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:12.363345",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 5.0
+                }
+            ],
+            "time": 0.011554956436157227
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:12.410887",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 5.0
+                }
+            ],
+            "time": 0.011675119400024414
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:12.476088",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 5.0
+                }
+            ],
+            "time": 0.005415916442871094
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:12.529773",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 0.014657020568847656
+        },
+        {
+            "who": "Taquero asada y suadero 1",
+            "when": "2021-12-05 19:53:12.571375",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 5.0
+                }
+            ],
+            "time": 0.012082338333129883
         }
     ],
     "descanso": [
@@ -1375,57 +1164,54 @@
             "name": "Inicio descanso",
             "duration": 3,
             "tacos": 100,
-            "time_stamp": "2021-12-05 19:49:13.611124"
+            "time_stamp": "2021-12-05 19:53:10.217525"
         },
         {
             "name": "Termino descanso",
             "duration": 3,
             "tacos": 100,
-            "time_stamp": "2021-12-05 19:49:13.621304"
+            "time_stamp": "2021-12-05 19:53:10.235159"
         },
         {
             "name": "Inicio descanso",
             "duration": 3,
             "tacos": 100,
-            "time_stamp": "2021-12-05 19:49:15.531128"
+            "time_stamp": "2021-12-05 19:53:11.455454"
         },
         {
             "name": "Termino descanso",
             "duration": 3,
             "tacos": 100,
-            "time_stamp": "2021-12-05 19:49:15.536606"
+            "time_stamp": "2021-12-05 19:53:11.475606"
         },
         {
             "name": "Inicio descanso",
             "duration": 3,
             "tacos": 100,
-            "time_stamp": "2021-12-05 19:49:20.388484"
+            "time_stamp": "2021-12-05 19:53:12.598485"
         },
         {
             "name": "Termino descanso",
             "duration": 3,
             "tacos": 100,
-            "time_stamp": "2021-12-05 19:49:20.399176"
+            "time_stamp": "2021-12-05 19:53:12.618292"
         }
     ],
     "ventilador": [
         {
             "name": "Prender ventilador",
             "duration": 30,
-            "time_stamp": "2021-12-05 19:49:20.421541",
-            "tacos": 304
+            "time_stamp": "2021-12-05 19:53:12.637810",
+            "tacos": 301
         }
     ]
-} descanso",
-            "duration": 3,
-            "tacos": 100,
-            "time_stamp": "2021-12-05 19:49:20.388484"
+}: "2021-12-05 19:53:12.598485"
         },
         {
             "name": "Termino descanso",
             "duration": 3,
             "tacos": 100,
-            "time_stamp": "2021-12-05 19:49:20.399176"
+            "time_stamp": "2021-12-05 19:53:12.618292"
         }
     ]
 }

@@ -1,0 +1,419 @@
+{
+    "taquero": "Taquero Juan",
+    "types": [
+        "asada",
+        "suadero"
+    ],
+    "preparar": [
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:06.986244",
+            "what": [
+                {
+                    "amount": 3,
+                    "fillings": [
+                        "salsa"
+                    ],
+                    "type": "quesadilla",
+                    "meat": "suadero",
+                    "prep_time": 1.5
+                }
+            ],
+            "time": 0.0018911361694335938
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:06.988492",
+            "what": [
+                {
+                    "amount": 3,
+                    "fillings": [
+                        "salsa"
+                    ],
+                    "type": "quesadilla",
+                    "meat": "suadero",
+                    "prep_time": 1.5
+                }
+            ],
+            "time": 0.0018868446350097656
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:06.990414",
+            "what": [
+                {
+                    "amount": 2,
+                    "fillings": [
+                        "salsa"
+                    ],
+                    "type": "quesadilla",
+                    "meat": "suadero",
+                    "prep_time": 1.0
+                }
+            ],
+            "time": 0.0012600421905517578
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:06.992577",
+            "what": [
+                {
+                    "amount": 3,
+                    "fillings": [
+                        "salsa"
+                    ],
+                    "type": "quesadilla",
+                    "meat": "suadero",
+                    "prep_time": 1.5
+                }
+            ],
+            "time": 0.0018858909606933594
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.006702",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.01387786865234375
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.021531",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.014554262161254883
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.037010",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.015193939208984375
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.050374",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.012948989868164062
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.065560",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.014823198318481445
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.079484",
+            "what": [
+                {
+                    "amount": 4,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                },
+                {
+                    "amount": 1,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 2.5
+                }
+            ],
+            "time": 0.013430595397949219
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.093304",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.013253211975097656
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.107256",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.013412952423095703
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.120342",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.01257181167602539
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.136454",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.015279054641723633
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.152798",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.012657880783081055
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.166482",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.012774229049682617
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.183084",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.014760017395019531
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.199591",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.01520395278930664
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.214975",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.014320850372314453
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.229754",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.013583183288574219
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.245856",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 0.01478886604309082
+        },
+        {
+            "who": "Taquero Juan",
+            "when": "2021-12-05 19:53:07.260077",
+            "what": [
+                {
+                    "amount": 4,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 10.0
+                },
+                {
+                    "amount": 1,
+                    "fillings": [
+                        "salsa",
+                        "cilantro",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 2.5
+                }
+            ],
+            "time": 0.013051986694335938
+        }
+    ]
+}
