@@ -1,0 +1,461 @@
+{
+    "taquero": "Taquero adobada",
+    "types": [
+        "adobada"
+    ],
+    "preparar": [
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:12.952517",
+            "what": [
+                {
+                    "amount": 2,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "quesadilla",
+                    "meat": "adobada",
+                    "prep_time": 2.0
+                },
+                {
+                    "amount": 2,
+                    "fillings": [],
+                    "type": "quesadilla",
+                    "meat": "adobada",
+                    "prep_time": 0.0
+                }
+            ],
+            "time": 1.0035970211029053
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:19.711309",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 6.254817008972168
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:20.215420",
+            "what": [],
+            "time": 1.1920928955078125e-06
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:22.222869",
+            "what": [
+                {
+                    "amount": 1,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "quesadilla",
+                    "meat": "adobada",
+                    "prep_time": 1.0
+                }
+            ],
+            "time": 0.5001420974731445
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:28.995484",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 6.2659711837768555
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:29.499078",
+            "what": [],
+            "time": 1.1920928955078125e-06
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:30.005335",
+            "what": [],
+            "time": 2.1457672119140625e-06
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:35.513880",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 5.003616809844971
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:36.521491",
+            "what": [
+                {
+                    "amount": 1,
+                    "fillings": [
+                        "cilantro",
+                        "salsa"
+                    ],
+                    "type": "quesadilla",
+                    "meat": "adobada",
+                    "prep_time": 1.0
+                }
+            ],
+            "time": 0.5043721199035645
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:43.278794",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 6.252501964569092
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:43.782403",
+            "what": [],
+            "time": 1.1920928955078125e-06
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:44.286117",
+            "what": [],
+            "time": 1.1920928955078125e-06
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:49.793176",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 5.004997968673706
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:50.301507",
+            "what": [],
+            "time": 6.9141387939453125e-06
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:19:57.082744",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 6.254293203353882
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:02.593780",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 5.0050132274627686
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:03.099402",
+            "what": [],
+            "time": 0.0
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:08.609336",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 5.003838062286377
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:09.117082",
+            "what": [
+                {
+                    "amount": 1,
+                    "fillings": [],
+                    "type": "quesadilla",
+                    "meat": "adobada",
+                    "prep_time": 0.0
+                }
+            ],
+            "time": 1.9788742065429688e-05
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:15.878814",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 6.255057096481323
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:21.388939",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 5.001528024673462
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:27.418065",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 5.005039215087891
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:27.925389",
+            "what": [],
+            "time": 2.86102294921875e-06
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:34.684451",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 6.252739906311035
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:40.193912",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 5.0018439292907715
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:46.210335",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 5.004175901412964
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:46.717916",
+            "what": [
+                {
+                    "amount": 1,
+                    "fillings": [],
+                    "type": "quesadilla",
+                    "meat": "adobada",
+                    "prep_time": 0.0
+                }
+            ],
+            "time": 1.71661376953125e-05
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:53.472554",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa",
+                        "cebolla"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 12.5
+                }
+            ],
+            "time": 6.2495129108428955
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:20:58.985034",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 5.0034401416778564
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:21:04.499885",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 5.003890037536621
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:21:10.008992",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "guacamole",
+                        "salsa"
+                    ],
+                    "type": "taco",
+                    "meat": "adobada",
+                    "prep_time": 10.0
+                }
+            ],
+            "time": 5.004250764846802
+        },
+        {
+            "who": "Taquero adobada",
+            "when": "2021-12-05 20:21:10.515915",
+            "what": [],
+            "time": 5.9604644775390625e-06
+        }
+    ]
+}

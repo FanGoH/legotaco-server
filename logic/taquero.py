@@ -18,8 +18,8 @@ QUANTUM = 5
 BASE_TACO_TIME = 1
 FILLING_TIME = 0.5
 
-FAN_DEADLINE = 600
-FAN_RUNNING_TIME = 60
+FAN_DEADLINE = 300
+FAN_RUNNING_TIME = 30
 
 REST_DEADLINE = 100
 REST_RUNNING_TIME = 3
@@ -152,12 +152,13 @@ class Taquero:
 
         work_log = {
             "who": self.name,
-            "when": time.time(),
+            "when": str(datetime.now()),
             "what": work_performed,
             "time": end-start,
         }
-
-        order.log_work(work_log)
+        if len(work_performed) > 0:
+            self.log_action("preparar", work_log)
+            order.log_work(work_log)
         if self.is_order_complete(order):
             self.complete_order(order, handle)
 
@@ -175,7 +176,7 @@ class Taquero:
         self.lock.release()
 
     def is_order_complete(self, order):
-        return len(self.get_order_todo(order)) == 0
+        return len(self.get_order_todo_tacos(order)) == 0
 
     def get_order_todo(self, order):
         raw_todo = map(lambda type: order.get_remaining_parts_of_type(type), self.types)
@@ -185,7 +186,15 @@ class Taquero:
         quesadilla_parts = filter(lambda todo_: todo_.type == "quesadilla", todo)
         todo = [*taco_parts, *quesadilla_parts]
 
-        print(f"{self.name} - this is what i have to do: ", todo)
+        # print(f"{self.name} - this is what i have to do: ", todo)
+        return todo
+
+    def get_order_todo_tacos(self, order):
+        raw_todo = map(lambda type: order.get_remaining_parts_of_type(type), self.types)
+        todo = functools.reduce(lambda p, c: [*p, *c], raw_todo, [])
+        todo = list(filter(lambda todo_: todo_.type == "taco", todo))
+
+        # print(f"{self.name} - this is what i have to do: ", todo)
         return todo
 
     def enough_ingredients(self, tacos, amount):
@@ -210,38 +219,46 @@ class Taquero:
         json.dump(data,f)
 
     def run_fan(self):
-        if self.fan_tacos_prepared < FAN_DEADLINE and not self.fan_running:
+        if self.fan_tacos_prepared < FAN_DEADLINE:
             return
+        if self.fan_running:
+            return
+        self.fan_running = True
+        
         amount = self.fan_tacos_prepared
         self.fan_tacos_prepared -= FAN_DEADLINE
         Thread(target=self.run_fan_handler, args=(amount, )).start()
 
     def run_fan_handler(self, amount):
-        self.fan_running = True
+        
         self.log_action("ventilador", {
             "name": "Prender ventilador",
             "duration": FAN_RUNNING_TIME,
-            "tacos": amount
+            "time_stamp": str(datetime.now()),
+            "tacos": amount,
         })
 
-        sleep(FAN_RUNNING_TIME)
+        sleep(FAN_RUNNING_TIME * SPEEDUP)
 
         self.log_action("ventilador", {
             "name": "Apagar ventilador",
+            "time_stamp": str(datetime.now()),
         })
         self.fan_running = False
 
     def log_action(self, event_name, action_log):
-        print("logging action")
-        filename = f"output/taquero-{self.name}.json"
+        filename = f"output/taquero/taquero-{self.name}.json"
+        with open(filename, 'a+'):
+            ""
         with open(filename, 'r+') as filein, open(filename, 'r+') as fileout:
             try:
                 logs = json.load(filein)
             except:
-                logs = {}
-            print(logs)
+                logs = {
+                    "taquero": self.name,
+                    "types": self.types,
+                }
             if not event_name in logs:
                 logs[event_name] = []
             logs[event_name].append(action_log)
-            print(logs)
-            json.dump(logs, fileout, indent=4)
+            fileout.write(json.dumps(logs, indent=4))

@@ -14,13 +14,13 @@ from logic.order_queue import OrderQueue
 lock = Lock()
 
 
-def generate_default_fillings():
+def generate_default_fillings(to=""):
     filling_list = [
-        Filling(max_=200, name="cebolla"),
-        Filling(max_=200, name="cilantro"),
-        Filling(max_=150, name="salsa"),
-        Filling(max_=100, name="guacamole"),
-        Filling(max_=50, name="tortilla"),
+        Filling(max_=200, name="cebolla", to=to),
+        Filling(max_=200, name="cilantro", to=to),
+        Filling(max_=150, name="salsa", to=to),
+        Filling(max_=100, name="guacamole", to=to),
+        Filling(max_=50, name="tortilla", to=to),
     ]
     filling = {filling.name: filling for filling in filling_list}
     return filling, filling_list
@@ -29,7 +29,7 @@ def generate_default_quesadilla_stack():
     return Filling(max_=5, name="quesadilla", available=5)
 
 def generate_generic_taquero(name, types, scheduler, send_to_master_queue):
-    fillings, fillings_list = generate_default_fillings()
+    fillings, fillings_list = generate_default_fillings(to=name)
     quesadillas = generate_default_quesadilla_stack()
     config = TaqueroConfig(
         name=name,
@@ -81,8 +81,8 @@ def put_taquero_to_work(taquero):
         sleep(1 * SPEEDUP)
 
 if __name__ == "__main__":
+    scheduler_asada = generate_scheduler() 
     scheduler_adobada = generate_scheduler()
-    scheduler_asada = generate_scheduler()
     scheduler_tripa = generate_scheduler()
 
     master_scheduler = MasterScheduler({
@@ -120,8 +120,8 @@ if __name__ == "__main__":
         send_to_master_queue=lambda order: master_scheduler.return_order(order, scheduler_tripa.queue)
     )
 
-    chalan_adobada_asada = Chalan([*taquero_adobada.fillings_list, *taquero_asada_1.fillings_list], lock)
-    chalan_tripa_asada = Chalan([*taquero_tripa.fillings_list, *taquero_asada_2.fillings_list], lock)
+    chalan_adobada_asada = Chalan([*taquero_adobada.fillings_list, *taquero_asada_1.fillings_list], lock, "Chalan 1")
+    chalan_tripa_asada = Chalan([*taquero_tripa.fillings_list, *taquero_asada_2.fillings_list], lock, "Chalan 2")
 
     quesadillero = Quesadillero(
         scheduler=RoundRobin(

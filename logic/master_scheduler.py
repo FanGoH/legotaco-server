@@ -7,11 +7,14 @@ from logic.master_helpers.queue_tracker import QueueTracker
 from logic.order import Order
 
 from logic.order_queue import OrderQueue
+from functools import reduce
 
 sqs_manager = SQSManager(
     ["https://sqs.us-east-1.amazonaws.com/292274580527/sqs_cc106_team_1"],
     ["https://sqs.us-east-1.amazonaws.com/292274580527/sqs_cc106_team_1_response"]
 )
+
+TACO_QUEUE_LIMIT = 750
 
 
 class MasterScheduler:
@@ -47,9 +50,18 @@ class MasterScheduler:
         self.returns_queue.put(order)
 
     def complete_order(self, order):
+        print("order completed")
         sqs_manager.complete_Order(order)
 
     def load_order(self):
+        can_retrieve = True
+        for queue, tracker in self.queue_trackers.items():
+            print("too many orders, skipping")
+            amount = tracker.count_remaining()
+            can_retrieve &= amount.taco < TACO_QUEUE_LIMIT
+        if not can_retrieve:
+            return None
+
         order = sqs_manager.getNextOrder()
         return order
 
@@ -122,7 +134,15 @@ class MasterScheduler:
         # There are no orders to be assigned
         if not order:
             return
-        
+
+        if sum(map(lambda r: r.quesadilla + r.taco, self.__get_remaining_for_order_per_queue(order).values())) > 500:
+            order.log_work({
+                "error": "error.too_big",
+                "message": "La orden es demasiado grande",
+            })
+            self.complete_order(order)
+            return
+
         if order.is_completed():
             print("Master: I received an order that is completed")
             self.complete_order(order)

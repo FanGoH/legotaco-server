@@ -74,10 +74,26 @@ class SQSManager:
             QueueUrl=self.queues[0],
             ReceiptHandle=order.get_handle()
         )
+        self.log_action("completed", json.loads(jsons.dumps(order)))
         self.client.send_message(
             QueueUrl=self.responseQueues[0],
             MessageBody=jsons.dumps(order)
         )
+
+    def log_action(self, event_name, action_log):
+        filename = f"output/completadas.json"
+        with open(filename, 'a+'):
+            ""
+        with open(filename, 'r+') as filein, open(filename, 'r+') as fileout:
+            try:
+                logs = json.load(filein)
+            except:
+                logs = {}
+            if not event_name in logs:
+                logs[event_name] = []
+            logs[event_name].append(action_log)
+            fileout.write(json.dumps(logs, indent=4))
+
 
 if __name__ == "__main__":
     queue = ["https://sqs.us-east-1.amazonaws.com/292274580527/sqs_cc106_team_1"]
