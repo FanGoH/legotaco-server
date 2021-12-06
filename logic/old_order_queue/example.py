@@ -9,21 +9,23 @@ def generate_tacos():
     type = ["taco", "quesadilla"]
     meat = ["asada", "adobada", "suadero", "tripa", "cabeza"]
     fillings = ["cebolla", "cilantro", "salsa", "guacamole"]
-    for x in range(random.randrange(100)):
+    for x in range(5):
         taco = {
             "datetime": str(datetime.now()),
             "request_id": x,
             "status": "open",
-            "orden": []
+            "orden": [],
+            "response":[]
         }
-        for y in range(random.randrange(10)):
+        for y in range(random.randrange(5)):
+            tp =random.choice(type)
             taco["orden"].append(
                 {
                     "part_id": "{0}-{1}".format(x, y),
-                    "type": random.choice(type),
+                    "type": tp ,
                     "meat": random.choice(meat),
                     "status": "open",
-                    "quantity": random.randrange(100),
+                    "quantity": random.randrange(50) if tp =='taco' else random.randrange(5),
                     "ingredients": []
                 }
             )
