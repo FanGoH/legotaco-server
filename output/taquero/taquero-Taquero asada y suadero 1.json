@@ -7,29 +7,33 @@
     "preparar": [
         {
             "who": "Taquero asada y suadero 1",
-            "when": "2021-12-05 19:53:16.276887",
+            "when": "2021-12-05 20:03:56.304349",
             "what": [
                 {
-                    "amount": 1,
+                    "amount": 5,
                     "fillings": [],
                     "type": "taco",
                     "meat": "suadero",
-                    "prep_time": 1.0
+                    "prep_time": 5.0
                 }
             ],
-            "time": 0.0012400150299072266
+            "time": 0.007021903991699219
         }
     ]
-}          },
-                {
-                    "amount": 4,
-                    "fillings": [],
-                    "type": "taco",
+}            }
+            ],
+            "time": 0.014666080474853516
+        }
+    ]
+}time": 0.013117074966430664
+        }
+    ]
+}co",
                     "meat": "suadero",
                     "prep_time": 4.0
                 }
             ],
-            "time": 0.009164094924926758
+            "time": 0.012267112731933594
         }
     ]
 }ero asada y suadero 1",

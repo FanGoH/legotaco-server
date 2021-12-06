@@ -7,33 +7,32 @@
     "preparar": [
         {
             "who": "Taquero asada y suadero 2",
-            "when": "2021-12-05 19:53:16.273038",
+            "when": "2021-12-05 20:03:56.332225",
             "what": [
                 {
-                    "amount": 5,
+                    "amount": 1,
                     "fillings": [],
                     "type": "taco",
                     "meat": "suadero",
-                    "prep_time": 5.0
+                    "prep_time": 1.0
                 }
             ],
-            "time": 0.011036872863769531
+            "time": 0.0011708736419677734
         }
     ]
-}            }
-            ],
-            "time": 0.012788772583007812
-        }
-    ]
-}time": 0.010738849639892578
-        }
-    ]
-}  {
-            "who": "Taquero asada y suadero 2",
-            "when": "2021-12-05 19:53:07.498912",
-            "what": [
+}          },
                 {
-                    "amount": 5,
+                    "amount": 4,
+                    "fillings": [],
+                    "type": "taco",
+                    "meat": "suadero",
+                    "prep_time": 4.0
+                }
+            ],
+            "time": 0.008398056030273438
+        }
+    ]
+}5,
                     "fillings": [
                         "cilantro",
                         "salsa"
