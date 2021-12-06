@@ -6,6 +6,7 @@ from time import sleep
 from logic.filling import Filling
 from logic.round_robin import RoundRobin
 from logic.config import SPEEDUP
+import json
 #porque ese List en lugar de list?
 # a, es que es un tipo en lugar de una lista
 #l barto
@@ -25,7 +26,8 @@ times = {
 }
 
 class Chalan:
-    def __init__(self, containers: List[Filling], lock: Lock):
+    def __init__(self, containers: List[Filling], lock: Lock, name="Chalan"):
+        self.name = name
         self.scheduler = RoundRobin(
             containers,
             None,
@@ -44,9 +46,40 @@ class Chalan:
 
         if to_fill == 0:
             return
+
+        self.log_action("refill", {
+            "to": filling.to,
+            "type": filling.name,
+            "amount": to_fill,
+            "max": filling.max,
+            "remaining": filling.available,
+            "message": "start refill"
+        })
         sleep(time * SPEEDUP)
+        self.log_action("refill", {
+            "to": filling.to,
+            "type": filling.name,
+            "amount": to_fill,
+            "max": filling.max,
+            "remaining": filling.available,
+            "message": "end refill"
+        })
 
         self.lock.acquire()
         filling.available += to_fill
         self.lock.release()
         return to_fill, time
+    
+    def log_action(self, event_name, action_log):
+        filename = f"output/chalan/chalan-{self.name}.json"
+        with open(filename, 'a+'):
+            ""
+        with open(filename, 'r+') as filein, open(filename, 'r+') as fileout:
+            try:
+                logs = json.load(filein)
+            except:
+                logs = {}
+            if not event_name in logs:
+                logs[event_name] = []
+            logs[event_name].append(action_log)
+            fileout.write(json.dumps(logs, indent=4))

@@ -18,8 +18,8 @@ QUANTUM = 5
 BASE_TACO_TIME = 1
 FILLING_TIME = 0.5
 
-FAN_DEADLINE = 600
-FAN_RUNNING_TIME = 60
+FAN_DEADLINE = 300
+FAN_RUNNING_TIME = 30
 
 REST_DEADLINE = 100
 REST_RUNNING_TIME = 3
@@ -152,11 +152,11 @@ class Taquero:
 
         work_log = {
             "who": self.name,
-            "when": time.time(),
+            "when": str(datetime.now()),
             "what": work_performed,
             "time": end-start,
         }
-
+        self.log_action("preparar", work_log)
         order.log_work(work_log)
         if self.is_order_complete(order):
             self.complete_order(order, handle)
@@ -210,38 +210,48 @@ class Taquero:
         json.dump(data,f)
 
     def run_fan(self):
-        if self.fan_tacos_prepared < FAN_DEADLINE and not self.fan_running:
+        if self.fan_tacos_prepared < FAN_DEADLINE:
             return
+        if self.fan_running:
+            return
+        self.fan_running = True
+        
         amount = self.fan_tacos_prepared
         self.fan_tacos_prepared -= FAN_DEADLINE
         Thread(target=self.run_fan_handler, args=(amount, )).start()
 
     def run_fan_handler(self, amount):
-        self.fan_running = True
+        
         self.log_action("ventilador", {
             "name": "Prender ventilador",
             "duration": FAN_RUNNING_TIME,
-            "tacos": amount
+            "time_stamp": str(datetime.now()),
+            "tacos": amount,
         })
 
-        sleep(FAN_RUNNING_TIME)
+        sleep(FAN_RUNNING_TIME * SPEEDUP)
 
         self.log_action("ventilador", {
             "name": "Apagar ventilador",
+            "time_stamp": str(datetime.now()),
         })
         self.fan_running = False
 
     def log_action(self, event_name, action_log):
-        print("logging action")
-        filename = f"output/taquero-{self.name}.json"
+        filename = f"output/taquero/taquero-{self.name}.json"
+        with open(filename, 'a+'):
+            ""
         with open(filename, 'r+') as filein, open(filename, 'r+') as fileout:
             try:
                 logs = json.load(filein)
             except:
-                logs = {}
+                logs = {
+                    "taquero": self.name,
+                    "types": self.types,
+                }
             print(logs)
             if not event_name in logs:
                 logs[event_name] = []
             logs[event_name].append(action_log)
             print(logs)
-            json.dump(logs, fileout, indent=4)
+            fileout.write(json.dumps(logs, indent=4))
