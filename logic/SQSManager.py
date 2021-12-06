@@ -71,7 +71,7 @@ class SQSManager:
 
     def complete_Order(self, order: Order):
         self.client.delete_message(
-            QueueUrl=self.queues[0],
+            QueueUrl=self.queues[order.index % len(self.queues)],
             ReceiptHandle=order.get_handle()
         )
         self.log_action("completed", json.loads(jsons.dumps(order)))
