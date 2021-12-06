@@ -156,8 +156,9 @@ class Taquero:
             "what": work_performed,
             "time": end-start,
         }
-        self.log_action("preparar", work_log)
-        order.log_work(work_log)
+        if len(work_performed) > 0:
+            self.log_action("preparar", work_log)
+            order.log_work(work_log)
         if self.is_order_complete(order):
             self.complete_order(order, handle)
 
