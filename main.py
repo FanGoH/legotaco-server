@@ -58,7 +58,7 @@ def generate_order_replacer(queue: OrderQueue):
     def order_replacer(index):
         nonlocal priorities
         nonlocal queue
-        print(f"A taquero completed an order, replacing with {index}")
+        # print(f"A taquero completed an order, replacing with {index}")
         return queue.get(priority=priorities[index])
 
     return order_replacer

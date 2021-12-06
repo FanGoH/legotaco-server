@@ -17,6 +17,9 @@ QUANTUM = 5
 BASE_TACO_TIME = 1
 FILLING_TIME = 0.5
 
+FAN_DEADLINE = 600
+FAN_RUNNING_TIME = 60
+
 # 1 second equals 0 seconds 8)
 
 MAIN_PRODUCT_BASE_TIME = {
@@ -52,10 +55,14 @@ class Taquero:
         self.send_to_master = config.send_to_master
         self.lock = config.lock
         self.Fan = Fan(Fanconfig)
-        self.amountPrepared = 0
         self.resting = False
         self.TimesRested = 0
         self.Fan.Launch()
+
+        self.fan_running = False
+
+        self.amountPrepared = 0
+        self.tacos_made = 0
 
     def work(self):
         self.scheduler.work_on_next(
@@ -119,8 +126,10 @@ class Taquero:
             sleep(prep_time * SPEEDUP)
 
             self.Fan.addTacos(amount)
-            self.amountPrepared += amount
+            self.run_fan()
 
+            self.tacos_made += amount
+            self.amountPrepared += amount
         end = time.time()
 
         work_log = {
@@ -182,11 +191,39 @@ class Taquero:
         data.append(datas)
         json.dump(data,f)
 
+    def run_fan(self):
+        if self.tacos_made < FAN_DEADLINE and not self.fan_running:
+            return
+        amount = self.tacos_made
+        self.tacos_made -= FAN_DEADLINE
+        Thread(target=self.run_fan_handler, args=(amount, )).start()
+
+    def run_fan_handler(self, amount):
+        self.fan_running = True
+        self.log_action("ventilador", {
+            "name": "Prender ventilador",
+            "duration": FAN_RUNNING_TIME,
+            "tacos": amount
+        })
+
+        sleep(FAN_RUNNING_TIME)
+
+        self.log_action("ventilador", {
+            "name": "Apagar ventilador",
+        })
+        self.fan_running = False
+
     def log_action(self, event_name, action_log):
-        f = open(f"output/taquero-{self.name}.json", 'w')
-        data =  json.load(f)
-        if not event_name in data:
-            data[event_name] = []
-        data[event_name].append(action_log)
-        json.dump(data,f)
-        f.close()
+        print("logging action")
+        filename = f"output/taquero-{self.name}.json"
+        with open(filename, 'r+') as filein, open(filename, 'r+') as fileout:
+            try:
+                logs = json.load(filein)
+            except:
+                logs = {}
+            print(logs)
+            if not event_name in logs:
+                logs[event_name] = []
+            logs[event_name].append(action_log)
+            print(logs)
+            json.dump(logs, fileout, indent=4)
