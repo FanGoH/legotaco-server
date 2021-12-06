@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from datetime import date, datetime
 import functools
 from threading import Lock, Thread
 from time import sleep
@@ -19,6 +20,9 @@ FILLING_TIME = 0.5
 
 FAN_DEADLINE = 600
 FAN_RUNNING_TIME = 60
+
+REST_DEADLINE = 100
+REST_RUNNING_TIME = 3
 
 # 1 second equals 0 seconds 8)
 
@@ -55,14 +59,15 @@ class Taquero:
         self.send_to_master = config.send_to_master
         self.lock = config.lock
         self.Fan = Fan(Fanconfig)
-        self.resting = False
-        self.TimesRested = 0
+        self.times_rested = 0
         self.Fan.Launch()
 
         self.fan_running = False
+        self.resting = False
 
-        self.amountPrepared = 0
-        self.tacos_made = 0
+        self.amount_prepared = 0
+        self.fan_tacos_prepared = 0
+        self.rest_tacos_prepared = 0
 
     def work(self):
         self.scheduler.work_on_next(
@@ -76,11 +81,23 @@ class Taquero:
 
         # print(f"{self.name} - I am working on order", jsons.dumps(order))
 
-        if(self.amountPrepared // 100 > self.TimesRested):
-            self.TimesRested += 1
+        if(self.amount_prepared // REST_DEADLINE > self.times_rested):
+            self.times_rested += 1
             self.resting = True
-            sleep(3 * SPEEDUP)
-            self.resting  =False
+            self.log_action("descanso", {
+                "name": "Inicio descanso",
+                "duration": REST_RUNNING_TIME,
+                "tacos": REST_DEADLINE,
+                "time_stamp": str(datetime.now())
+            })
+            sleep(REST_RUNNING_TIME * SPEEDUP)
+            self.log_action("descanso", {
+                "name": "Termino descanso",
+                "duration": REST_RUNNING_TIME,
+                "tacos": REST_DEADLINE,
+                "time_stamp": str(datetime.now())
+            })
+            self.resting = False
         
         remaining_quantum = QUANTUM
         work_performed = []
@@ -128,8 +145,9 @@ class Taquero:
             self.Fan.addTacos(amount)
             self.run_fan()
 
-            self.tacos_made += amount
-            self.amountPrepared += amount
+            self.fan_tacos_prepared += amount
+            self.rest_tacos_prepared += amount
+            self.amount_prepared += amount
         end = time.time()
 
         work_log = {
@@ -192,10 +210,10 @@ class Taquero:
         json.dump(data,f)
 
     def run_fan(self):
-        if self.tacos_made < FAN_DEADLINE and not self.fan_running:
+        if self.fan_tacos_prepared < FAN_DEADLINE and not self.fan_running:
             return
-        amount = self.tacos_made
-        self.tacos_made -= FAN_DEADLINE
+        amount = self.fan_tacos_prepared
+        self.fan_tacos_prepared -= FAN_DEADLINE
         Thread(target=self.run_fan_handler, args=(amount, )).start()
 
     def run_fan_handler(self, amount):
