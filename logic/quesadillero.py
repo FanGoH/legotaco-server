@@ -4,7 +4,7 @@ from time import sleep
 from logic.filling import Filling
 from logic.round_robin import Scheduler
 
-from logic.taquero import SPEEDUP
+from logic.config import SPEEDUP
 
 @dataclass
 class QuesadillaJob:

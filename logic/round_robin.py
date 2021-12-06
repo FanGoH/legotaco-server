@@ -31,11 +31,13 @@ class RoundRobin(Scheduler):
         # Avoids a context switch that can reschedule the same job
         try:
             self.lock.acquire()  # No context switching here, critical section
-            i = self.i = self._find_next_available_index()
-            self.working[self.i] = True
+            self.i = self._find_next_available_index()
+            i = self.i
+            self.working[i] = True
 
             element = self._get_current_element()
         except Exception as error:
+            self.working[i] = False
             raise error
         finally:
             self.lock.release()
@@ -46,6 +48,7 @@ class RoundRobin(Scheduler):
 
         # Finished working on the element
         # Acquiring a lock is not necessary because this is the only instance using the resource
+        
         self.working[i] = False
         return result
 
@@ -54,7 +57,7 @@ class RoundRobin(Scheduler):
         next_index = starting_index
 
         while self.working.get(next_index, False):
-            next_index = (self.i + 1) % len(self.elements)
+            next_index = (next_index + 1) % len(self.elements)
             # If all the elements have been checked, and every one of them is being worked on,
             # We raise an exception to avoid deadlocking everything
             if starting_index == next_index:

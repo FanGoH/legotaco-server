@@ -1,13 +1,14 @@
 from dataclasses import dataclass
 import functools
-from threading import Lock
+from threading import Lock, Thread
 from time import sleep
 import time
 from typing import Callable, Dict, List
 from logic.Fan import FanConfig,Fan
 from logic.filling import Filling
-from logic.order import Order
+from logic.order import Order, SubOrder
 from logic.round_robin import Scheduler
+from logic.config import SPEEDUP
 import jsons
 import json
 
@@ -16,7 +17,7 @@ QUANTUM = 5
 BASE_TACO_TIME = 1
 FILLING_TIME = 0.5
 
-SPEEDUP = 0  # 1 second equals 0 seconds 8)
+# 1 second equals 0 seconds 8)
 
 MAIN_PRODUCT_BASE_TIME = {
     "taco": 1,
@@ -63,7 +64,10 @@ class Taquero:
     def work_on_order(self, order: Order, handle: int):
         if not order: # just complete the non existent order to repopulate the scheduler
             self.complete_order(order, handle)
+            # print(f"{self.name} - No order to work :(")
             return
+
+        # print(f"{self.name} - I am working on order", jsons.dumps(order))
 
         if(self.amountPrepared // 100 > self.TimesRested):
             self.TimesRested += 1
@@ -90,10 +94,10 @@ class Taquero:
                 amount = self.fillings["tortilla"].available
 
             if not self.enough_ingredients(tacos, amount) or amount == 0:
-                work_performed.append({
-                    "amount": 0,
-                    "messages": "Not enough fillings",
-                })
+                # work_performed.append({
+                #     "amount": 0,
+                #     "messages": "Not enough fillings",
+                # })
                 self.lock.release()
                 continue
             remaining_quantum -= amount
@@ -147,9 +151,14 @@ class Taquero:
         return len(self.get_order_todo(order)) == 0
 
     def get_order_todo(self, order):
-        raw_todo = map(
-            lambda type: order.get_remaining_parts_of_type(type), self.types)
+        raw_todo = map(lambda type: order.get_remaining_parts_of_type(type), self.types)
         todo = functools.reduce(lambda p, c: [*p, *c], raw_todo, [])
+
+        taco_parts = filter(lambda todo_: todo_.type == "taco", todo)
+        quesadilla_parts = filter(lambda todo_: todo_.type == "quesadilla", todo)
+        todo = [*taco_parts, *quesadilla_parts]
+
+        print(f"{self.name} - this is what i have to do: ", todo)
         return todo
 
     def enough_ingredients(self, tacos, amount):
@@ -169,7 +178,15 @@ class Taquero:
     def performLog(self):
         f = open(f"{self.name}.json", 'w')
         data =  json.load(f)
-        datas = jsons.dump(self)
+        datas = jsons.dumps(self)
         data.append(datas)
         json.dump(data,f)
-        
+
+    def log_action(self, event_name, action_log):
+        f = open(f"output/taquero-{self.name}.json", 'w')
+        data =  json.load(f)
+        if not event_name in data:
+            data[event_name] = []
+        data[event_name].append(action_log)
+        json.dump(data,f)
+        f.close()

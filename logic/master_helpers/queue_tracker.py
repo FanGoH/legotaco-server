@@ -1,5 +1,5 @@
 import collections
-from typing import Deque
+from typing import Deque, Dict, List
 
 from logic.master_helpers.order_helper import OrderRemaining
 from logic.order import Order
@@ -10,12 +10,12 @@ class QueueTracker:
         self.meats = meats
         # The deque interface is similar to the one for a linked_list
         # Change later?
-        self.orders: Deque[Order] = collections.deque()
+        self.orders: Dict[str, Order]= {}
 
     # Complexity O(n * k) -> good enough it is at max O(2n)
     def count_remaining(self):
         remaining = OrderRemaining()
-        for order in self.orders:
+        for order in self.orders.keys():
             for meat in self.meats:
                 remaining.taco += order.get_amount_remaining_of_type(meat, "taco")
                 remaining.quesadilla += order.get_amount_remaining_of_type(meat, "quesadilla")
@@ -23,9 +23,10 @@ class QueueTracker:
 
         
     def add_order(self, order):
-        self.orders.insert(0, order)
+        self.orders[order] = True
         pass
 
     def remove_order(self, order):
-        self.orders.remove(order)
-        pass
+        if order not in self.orders:
+            return
+        del self.orders[order]

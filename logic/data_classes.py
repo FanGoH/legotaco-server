@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import List
+from typing import Dict, List
 from logic.order import Order
 from logic.order_queue import OrderQueue
 from logic.round_robin import Scheduler
@@ -10,7 +10,8 @@ from logic.filling import Filling
 @dataclass
 class GenericTaquero:
     taquero: Taquero
-    fillings: List[Filling]
+    fillings: Dict[str, Filling]
+    fillings_list: List[Filling]
     quesadillas: Filling
     config: TaqueroConfig
 

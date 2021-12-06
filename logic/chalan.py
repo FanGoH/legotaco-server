@@ -5,7 +5,7 @@ from time import sleep
 
 from logic.filling import Filling
 from logic.round_robin import RoundRobin
-from logic.taquero import SPEEDUP
+from logic.config import SPEEDUP
 #porque ese List en lugar de list?
 # a, es que es un tipo en lugar de una lista
 #l barto
@@ -42,6 +42,8 @@ class Chalan:
         time = to_fill * times.get(filling.name, 0)
         self.lock.release()
 
+        if to_fill == 0:
+            return
         sleep(time * SPEEDUP)
 
         self.lock.acquire()

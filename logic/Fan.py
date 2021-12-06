@@ -3,8 +3,7 @@ from dataclasses import dataclass
 from threading import Thread
 import threading
 from time import sleep
-
-SPEEDUP = 0
+from logic.config import SPEEDUP
 
 
 
@@ -44,7 +43,7 @@ class Fan:
     def TurnFan(self):
         print("ventilando")
         self.turnedOn = True
-        sleep(self.TimeOn)
+        sleep(self.config.TImeOn)
         self.turnedOn = False
     
 

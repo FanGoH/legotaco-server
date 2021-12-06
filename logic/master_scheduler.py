@@ -50,7 +50,7 @@ class MasterScheduler:
         sqs_manager.complete_Order(order)
 
     def load_order(self):
-        order = sqs_manager.getOrder()
+        order = sqs_manager.getNextOrder()
         return order
 
     def __get_next_order(self):
@@ -78,7 +78,14 @@ class MasterScheduler:
             for meat in meats:
                 remaining[queue].taco += order.get_amount_remaining_of_type(meat, "taco")
                 remaining[queue].quesadilla += order.get_amount_remaining_of_type(meat, "quesadilla")
-        return {queue:remaining for queue, remaining in remaining.items() if remaining.quesadilla > 0 and remaining.taco > 0}
+        # print("remaining before filtering: ", remaining)
+        result: Dict[OrderQueue, OrderRemaining] = {}
+        for queue, meat_remaining in remaining.items():
+            if meat_remaining.quesadilla > 0 or meat_remaining.taco > 0:
+                result[queue] = meat_remaining
+        # print("remaining after filtering: ", result)
+        return result
+
 
     def __find_suitable_queue(self, order: Order):
         remaining = self.__get_remaining_for_order_per_queue(order)
@@ -86,6 +93,7 @@ class MasterScheduler:
         min_taco_remaining = 1E100
         min_queue = None
         # find the order that has the least amount of tacos scheduled
+        # print("finding suitable: ", remaining)
         for queue, order_remaining in remaining.items():
             # if the order has no tacos to be prepared for this queue
             # just continue
@@ -97,6 +105,7 @@ class MasterScheduler:
             if queue_remaining.taco < min_taco_remaining:
                 min_queue = queue
                 min_taco_remaining = queue_remaining.taco
+
         return min_queue
 
     def __find_quesadilla_queue(self, order: Order):
@@ -115,17 +124,19 @@ class MasterScheduler:
             return
         
         if order.is_completed():
+            print("Master: I received an order that is completed")
             self.complete_order(order)
             return
 
         destination_queue = self.__find_suitable_queue(order)
+        print(f"Master: This is the suitable queue {destination_queue}")
 
         # the order only has quesadillas
         if destination_queue is None:
             destination_queue = self.__find_quesadilla_queue(order)
+            print(f"Master: This is the quesadillas queue for this {destination_queue}")
             priority = 2 # Priority 2 is quesadilla order
-            return
         
+        self.queue_trackers[destination_queue].add_order(order)
         destination_queue.put(priority, order)
-        
         # done

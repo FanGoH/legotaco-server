@@ -41,7 +41,7 @@ class SQSManager:
     def getOrderFromQueue(self, queue: int):
         results = self.client.receive_message(
             QueueUrl=self.queues[queue])
-        if(len(results['Messages']) <= 0):
+        if 'Messages' not in results:
             return None
         raw_order = json.loads(results['Messages'][0]['Body'])
         raw_order['handle'] = results['Messages'][0]['ReceiptHandle']
@@ -65,17 +65,17 @@ class SQSManager:
         return self.getOrderFromQueue(random.randint(0, len(self.queues)))
 
     def getNextOrder(self):
-        order = self.getOrderFromQueue(self.iter % len(queue))
+        order = self.getOrderFromQueue(self.iter % len(self.queues))
         self.iter += 1
         return order
 
     def complete_Order(self, order: Order):
         self.client.delete_message(
-            QueueUrl=self.queues[order.index],
+            QueueUrl=self.queues[0],
             ReceiptHandle=order.get_handle()
         )
         self.client.send_message(
-            QueueUrl=self.responseQueues[order.index],
+            QueueUrl=self.responseQueues[0],
             MessageBody=jsons.dumps(order)
         )
 
