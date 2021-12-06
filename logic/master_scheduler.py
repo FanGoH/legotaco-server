@@ -14,6 +14,8 @@ sqs_manager = SQSManager(
     ["https://sqs.us-east-1.amazonaws.com/292274580527/sqs_cc106_team_1_response"]
 )
 
+TACO_QUEUE_LIMIT = 750
+
 
 class MasterScheduler:
     def __init__(self, taco_queues: Dict[str, OrderQueue], lock:Lock):
@@ -48,9 +50,18 @@ class MasterScheduler:
         self.returns_queue.put(order)
 
     def complete_order(self, order):
+        print("order completed")
         sqs_manager.complete_Order(order)
 
     def load_order(self):
+        can_retrieve = True
+        for queue, tracker in self.queue_trackers.items():
+            print("too many orders, skipping")
+            amount = tracker.count_remaining()
+            can_retrieve &= amount.taco < TACO_QUEUE_LIMIT
+        if not can_retrieve:
+            return None
+
         order = sqs_manager.getNextOrder()
         return order
 
