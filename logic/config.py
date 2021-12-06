@@ -1,1 +1,1 @@
-SPEEDUP = 0.001
+SPEEDUP = 0.5

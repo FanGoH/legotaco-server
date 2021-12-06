@@ -185,7 +185,7 @@ class Taquero:
         quesadilla_parts = filter(lambda todo_: todo_.type == "quesadilla", todo)
         todo = [*taco_parts, *quesadilla_parts]
 
-        print(f"{self.name} - this is what i have to do: ", todo)
+        # print(f"{self.name} - this is what i have to do: ", todo)
         return todo
 
     def enough_ingredients(self, tacos, amount):
@@ -249,9 +249,7 @@ class Taquero:
                     "taquero": self.name,
                     "types": self.types,
                 }
-            print(logs)
             if not event_name in logs:
                 logs[event_name] = []
             logs[event_name].append(action_log)
-            print(logs)
             fileout.write(json.dumps(logs, indent=4))

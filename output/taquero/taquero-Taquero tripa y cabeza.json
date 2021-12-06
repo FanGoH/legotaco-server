@@ -7,532 +7,387 @@
     "preparar": [
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:07.650492",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011218786239624023
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:07.666999",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.009454011917114258
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:07.696791",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.00970911979675293
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:07.711259",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.007840871810913086
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:07.737867",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.010250091552734375
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:07.758951",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.00985407829284668
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:07.788844",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.010390043258666992
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:07.815776",
-            "what": [
-                {
-                    "amount": 2,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 3.0
-                },
-                {
-                    "amount": 3,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 0.004747152328491211
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:07.827343",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 1.0967254638671875e-05
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.379395",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.010352134704589844
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.410953",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.012621879577636719
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.436765",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.013486862182617188
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.457024",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.013007879257202148
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.474290",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.008615970611572266
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.476122",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.490121",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011842727661132812
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.506303",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.00820302963256836
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.521101",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011576175689697266
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.538024",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.009327888488769531
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.552094",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.010823965072631836
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.569043",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.008914947509765625
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.571120",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.578467",
-            "what": [
-                {
-                    "amount": 2,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 3.0
-                },
-                {
-                    "amount": 3,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 0.005350828170776367
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.613315",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011640071868896484
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.630248",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 1.4781951904296875e-05
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.653015",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011322975158691406
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.680802",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.012273788452148438
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.720660",
-            "what": [
-                {
-                    "amount": 2,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 3.0
-                },
-                {
-                    "amount": 3,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 0.004781961441040039
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:08.737551",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 1.0967254638671875e-05
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:09.576162",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:09.879388",
-            "what": [],
-            "time": 1.1920928955078125e-06
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:09.985638",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.118273",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.217638",
-            "what": [],
-            "time": 7.152557373046875e-07
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.229150",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.400063",
-            "what": [],
-            "time": 1.1920928955078125e-06
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.496962",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.578951",
+            "when": "2021-12-05 20:19:10.417128",
             "what": [],
             "time": 2.1457672119140625e-06
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.601074",
+            "when": "2021-12-05 20:19:11.929290",
+            "what": [],
+            "time": 1.9073486328125e-06
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:16.190517",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.755031108856201
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:20.453370",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.7568540573120117
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:20.965065",
             "what": [],
             "time": 1.1920928955078125e-06
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.658433",
+            "when": "2021-12-05 20:19:21.975216",
+            "what": [],
+            "time": 9.5367431640625e-07
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:26.256761",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.758932113647461
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:30.523416",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.7539658546447754
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:32.037859",
+            "what": [],
+            "time": 1.1920928955078125e-06
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:36.291799",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.75089693069458
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:40.552001",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.753899097442627
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:42.067189",
+            "what": [],
+            "time": 9.5367431640625e-07
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:46.325005",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.755021095275879
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:50.577507",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.750584840774536
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:52.091480",
+            "what": [],
+            "time": 1.1920928955078125e-06
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:19:56.347301",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.750282049179077
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:00.610617",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.756709098815918
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:02.133683",
+            "what": [],
+            "time": 2.1457672119140625e-06
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:06.393715",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.7550570964813232
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:10.660897",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.7600886821746826
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:12.174994",
+            "what": [],
+            "time": 2.1457672119140625e-06
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:16.435089",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.753753900527954
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:20.697853",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.7550759315490723
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:24.961680",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.7539188861846924
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:25.973016",
+            "what": [],
+            "time": 9.5367431640625e-07
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:27.983062",
+            "what": [
+                {
+                    "amount": 2,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 3.0
+                },
+                {
+                    "amount": 3,
+                    "fillings": [],
+                    "type": "quesadilla",
+                    "meat": "tripa",
+                    "prep_time": 0.0
+                }
+            ],
+            "time": 1.5037858486175537
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:29.989024",
+            "what": [
+                {
+                    "amount": 2,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 3.0
+                },
+                {
+                    "amount": 2,
+                    "fillings": [],
+                    "type": "quesadilla",
+                    "meat": "tripa",
+                    "prep_time": 0.0
+                }
+            ],
+            "time": 1.5033810138702393
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:34.250388",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.7538716793060303
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:35.266905",
+            "what": [],
+            "time": 9.5367431640625e-07
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:35.771774",
+            "what": [],
+            "time": 3.814697265625e-06
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:36.274062",
             "what": [],
             "time": 3.0994415283203125e-06
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.685231",
+            "when": "2021-12-05 20:20:40.531706",
             "what": [
                 {
                     "amount": 5,
@@ -544,407 +399,35 @@
                     "prep_time": 7.5
                 }
             ],
-            "time": 0.009459972381591797
+            "time": 3.755021095275879
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.750547",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.01298379898071289
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.813224",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.013256072998046875
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.848477",
+            "when": "2021-12-05 20:20:41.038319",
             "what": [],
             "time": 9.5367431640625e-07
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.888639",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.010740995407104492
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.931321",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.009404897689819336
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.970502",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.014388084411621094
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:10.994371",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.009971857070922852
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.030283",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.007941007614135742
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.078013",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.01665472984313965
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.102235",
+            "when": "2021-12-05 20:20:41.550508",
             "what": [],
             "time": 9.5367431640625e-07
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.156592",
-            "what": [
-                {
-                    "amount": 2,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 3.0
-                },
-                {
-                    "amount": 3,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 0.007077217102050781
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.198449",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.010737180709838867
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.218766",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 2.288818359375e-05
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.245572",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.010283946990966797
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.286013",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.009842872619628906
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.330416",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011230945587158203
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.349257",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.01176595687866211
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.409265",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.009790182113647461
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.461817",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.010959148406982422
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.494531",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.007940053939819336
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.508635",
-            "what": [
-                {
-                    "amount": 2,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 3.0
-                },
-                {
-                    "amount": 3,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 0.006354331970214844
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.576416",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.010090827941894531
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.614290",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 2.8848648071289062e-05
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.660788",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011822938919067383
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.708140",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.007954835891723633
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.790979",
+            "when": "2021-12-05 20:20:42.072000",
             "what": [],
-            "time": 0.0
+            "time": 7.867813110351562e-06
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.860340",
+            "when": "2021-12-05 20:20:42.603676",
+            "what": [],
+            "time": 1.0967254638671875e-05
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:46.888238",
             "what": [
                 {
                     "amount": 5,
@@ -956,249 +439,79 @@
                     "prep_time": 7.5
                 }
             ],
-            "time": 0.013382911682128906
+            "time": 3.7543251514434814
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.892530",
-            "what": [
-                {
-                    "amount": 2,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 3.0
-                },
-                {
-                    "amount": 3,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 0.005855083465576172
+            "when": "2021-12-05 20:20:47.895107",
+            "what": [],
+            "time": 1.1920928955078125e-06
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:11.936460",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
+            "when": "2021-12-05 20:20:48.402050",
+            "what": [],
+            "time": 5.9604644775390625e-06
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:48.911555",
+            "what": [],
             "time": 6.9141387939453125e-06
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.106029",
+            "when": "2021-12-05 20:20:53.171821",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.751865863800049
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:58.941613",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.750999689102173
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:20:59.449681",
             "what": [],
             "time": 9.5367431640625e-07
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.142249",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011053800582885742
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.197203",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011118888854980469
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.243148",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.009938955307006836
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.297541",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011026859283447266
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.324745",
+            "when": "2021-12-05 20:20:59.956881",
             "what": [],
-            "time": 0.0
+            "time": 7.152557373046875e-06
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.363498",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.01145792007446289
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.425485",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.013543844223022461
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.475739",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.010552167892456055
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.536882",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011929035186767578
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.585619",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.01398777961730957
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.639861",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.008380889892578125
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.685452",
-            "what": [
-                {
-                    "amount": 2,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 3.0
-                },
-                {
-                    "amount": 3,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 0.005583286285400391
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.737786",
+            "when": "2021-12-05 20:21:00.465781",
             "what": [],
-            "time": 0.0
+            "time": 4.76837158203125e-06
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.787279",
+            "when": "2021-12-05 20:21:04.721100",
             "what": [
                 {
                     "amount": 5,
@@ -1210,11 +523,33 @@
                     "prep_time": 7.5
                 }
             ],
-            "time": 0.018487930297851562
+            "time": 3.750196933746338
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.858311",
+            "when": "2021-12-05 20:21:08.982447",
+            "what": [
+                {
+                    "amount": 5,
+                    "fillings": [
+                        "cilantro"
+                    ],
+                    "type": "taco",
+                    "meat": "cabeza",
+                    "prep_time": 7.5
+                }
+            ],
+            "time": 3.754438877105713
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:21:09.485325",
+            "what": [],
+            "time": 9.5367431640625e-07
+        },
+        {
+            "who": "Taquero tripa y cabeza",
+            "when": "2021-12-05 20:21:09.992662",
             "what": [
                 {
                     "amount": 1,
@@ -1224,574 +559,13 @@
                     "prep_time": 0.0
                 }
             ],
-            "time": 1.811981201171875e-05
+            "time": 3.886222839355469e-05
         },
         {
             "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.914212",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.009072303771972656
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:12.962556",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.01338338851928711
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:13.010833",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.012389183044433594
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:13.053566",
-            "what": [
-                {
-                    "amount": 2,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 3.0
-                },
-                {
-                    "amount": 3,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 0.004665851593017578
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:13.088180",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 9.059906005859375e-06
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:13.204056",
+            "when": "2021-12-05 20:21:10.503397",
             "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:14.225719",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.01324915885925293
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:14.323710",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.01112985610961914
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:14.384262",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.01129603385925293
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:14.436280",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.014473915100097656
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:14.494253",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.013167142868041992
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:14.544955",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011515140533447266
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:14.596883",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.012188911437988281
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:14.635355",
-            "what": [
-                {
-                    "amount": 2,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 3.0
-                },
-                {
-                    "amount": 3,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 0.005196094512939453
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:14.719106",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 1.2159347534179688e-05
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:14.789259",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:15.013225",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:15.089564",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:15.168400",
-            "what": [],
-            "time": 7.152557373046875e-07
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:15.932885",
-            "what": [],
-            "time": 1.1920928955078125e-06
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:16.123995",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.014054298400878906
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:16.168231",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.01390695571899414
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:16.208298",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.012155771255493164
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:16.247927",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.01223611831665039
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:16.284999",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.009392261505126953
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:16.332063",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.01409769058227539
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 19:53:16.351980",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.0109100341796875
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:18.935315",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:19.069123",
-            "what": [],
-            "time": 1.1920928955078125e-06
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:19.177598",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.008833885192871094
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:19.259965",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.012910842895507812
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:19.322431",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.012939929962158203
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:19.383141",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.012881994247436523
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:19.430975",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011250972747802734
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:19.489736",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.011205911636352539
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:19.568322",
-            "what": [
-                {
-                    "amount": 5,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 7.5
-                }
-            ],
-            "time": 0.013691902160644531
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:19.643784",
-            "what": [
-                {
-                    "amount": 2,
-                    "fillings": [
-                        "cilantro"
-                    ],
-                    "type": "taco",
-                    "meat": "cabeza",
-                    "prep_time": 3.0
-                },
-                {
-                    "amount": 3,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 0.0068950653076171875
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:19.690855",
-            "what": [
-                {
-                    "amount": 1,
-                    "fillings": [],
-                    "type": "quesadilla",
-                    "meat": "tripa",
-                    "prep_time": 0.0
-                }
-            ],
-            "time": 3.504753112792969e-05
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:54.491551",
-            "what": [],
-            "time": 9.5367431640625e-07
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:54.580464",
-            "what": [],
-            "time": 0.0
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:54.674582",
-            "what": [],
-            "time": 3.0994415283203125e-06
-        },
-        {
-            "who": "Taquero tripa y cabeza",
-            "when": "2021-12-05 20:03:56.030867",
-            "what": [],
-            "time": 0.0
+            "time": 6.9141387939453125e-06
         }
     ],
     "descanso": [
@@ -1799,43 +573,13 @@
             "name": "Inicio descanso",
             "duration": 3,
             "tacos": 100,
-            "time_stamp": "2021-12-05 19:53:08.585883"
+            "time_stamp": "2021-12-05 20:20:53.681267"
         },
         {
             "name": "Termino descanso",
             "duration": 3,
             "tacos": 100,
-            "time_stamp": "2021-12-05 19:53:08.592047"
-        },
-        {
-            "name": "Inicio descanso",
-            "duration": 3,
-            "tacos": 100,
-            "time_stamp": "2021-12-05 19:53:11.427645"
-        },
-        {
-            "name": "Termino descanso",
-            "duration": 3,
-            "tacos": 100,
-            "time_stamp": "2021-12-05 19:53:11.433587"
-        },
-        {
-            "name": "Inicio descanso",
-            "duration": 3,
-            "tacos": 100,
-            "time_stamp": "2021-12-05 19:53:12.698860"
-        },
-        {
-            "name": "Termino descanso",
-            "duration": 3,
-            "tacos": 100,
-            "time_stamp": "2021-12-05 19:53:12.719307"
-        }
-    ],
-    "ventilador": [
-        {
-            "name": "Apagar ventilador",
-            "time_stamp": "2021-12-05 19:53:12.854665"
+            "time_stamp": "2021-12-05 20:20:55.186668"
         }
     ]
 }
